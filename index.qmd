@@ -1,0 +1,8 @@
+---
+title: "Index"
+format: html
+---
+
+# Welcome to the Index Page
+
+This is the main index page for your project.
