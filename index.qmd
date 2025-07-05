@@ -12,7 +12,7 @@ This is the main index page for your project.
 ```{python}
 import matplotlib.pyplot as plt
 
-labels = ['Craig Coding', "Craig Should've Coded"]
+labels = ['Craig Actually Coded', "Craig Should've Coded"]
 sizes = [1, 99]
 colors = ['#ff9999','#66b3ff']
 
