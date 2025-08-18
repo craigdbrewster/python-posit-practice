@@ -5,7 +5,7 @@ format: html
 
 # Welcome to the Index Page
 
-This is the main index page for your project.
+This is the main index page for Craig's learning demos.
 
 ## Demos
 
