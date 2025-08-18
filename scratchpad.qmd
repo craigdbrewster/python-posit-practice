@@ -15,9 +15,9 @@ format: html
 
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Scratchpad</h1>
 
-<p class="govuk-body">
+<pre class="govuk-body govuk-!-margin-bottom-6">
 ```{python}
 #| echo: false
 print("Hello, world!")
 ```
-</p>
+</pre>
