@@ -1,20 +1,15 @@
 ---
-title: ""        # use GOV.UK-styled heading below
+title: ""
 format:
   html:
     toc: false
 jupyter: python3
 ---
 
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper" id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-l">Pie chart example</h1>
-        <p class="govuk-body">
-          This chart is rendered by a Python code cell in Quarto and shown within the GOV.UK layout.
-        </p>
+<h1 class="govuk-heading-l">Pie chart example</h1>
+<p class="govuk-body">
+  This chart is rendered by a Python code cell in Quarto and shown within the GOV.UK layout.
+</p>
 
 ```{python}
 import matplotlib.pyplot as plt
