@@ -4,7 +4,6 @@ project:
 website:
   title: "HM Revenue and Customs"
   navbar:
-    # You can remove the 'logo:' line if using logo in page HTML
     left:
       - href: index.qmd
         text: Home
@@ -19,4 +18,4 @@ format:
     include-in-header: gds-header.html
 
 execute:
-  echo: false  # Hide code by default, if desired
+  echo: false
