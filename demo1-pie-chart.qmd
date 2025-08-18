@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 labels = ['Craig Actually Coded', "Craig Should\'ve Coded"]
 sizes = [2, 98]
-colors = ['#1d70b8', '#b1b4b6']
+colors = ['#1d70b8', '#f3f2f1']
 
 fig, ax = plt.subplots()
 ax.pie(
@@ -21,7 +21,7 @@ ax.pie(
     colors=colors,
     autopct='%1.1f%%',
     startangle=90,
-    textprops={'fontsize': 12, 'color': '#0b0c0c'}
+    textprops={'fontsize': 16, 'color': '#0b0c0c'}
 )
 ax.axis('equal')
 
