@@ -1,7 +1,15 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/govuk-frontend@4.8.0/dist/govuk-frontend.min.css">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/govuk-frontend@4.8.0/dist/govuk-frontend.min.css">
+
+<script>
+  // Mark JS as enabled early (recommended by GOV.UK)
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("js-enabled");
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/govuk-frontend@4.8.0/dist/govuk-frontend.min.js"></script>
 <script>
- window.GOVUKFrontend && window.GOVUKFrontend.initAll && window.GOVUKFrontend.initAll();
+  // Initialise all GOV.UK components
+  window.GOVUKFrontend && window.GOVUKFrontend.initAll && window.GOVUKFrontend.initAll();
 </script>
