@@ -9,8 +9,6 @@ website:
         text: Home
       - href: demo1-pie-chart.qmd
         text: Demo 1 - Pie Chart
-      - href: requirements.qmd
-        text: Requirements
 
 format:
   html:
