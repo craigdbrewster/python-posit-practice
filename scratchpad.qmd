@@ -16,7 +16,6 @@ format: html
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Scratchpad</h1>
 
 ```{python}
-
+#| echo: false
 print("Hello, world!")
-
 ```
