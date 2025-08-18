@@ -1,3 +1,21 @@
 <!-- GOV.UK Design System CSS via CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/govuk-frontend@4.8.0/dist/govuk-frontend.min.css">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- GOV.UK Design System JavaScript (for interactive components, optional) -->
+<script src="https://cdn.jsdelivr.net/npm/govuk-frontend@4.8.0/dist/govuk-frontend.min.js"></script>
+<script>
+  window.GOVUKFrontend && window.GOVUKFrontend.initAll && window.GOVUKFrontend.initAll();
+</script>
+
+<!-- Minimal custom styles for Quarto integration -->
+<style>
+body {
+  font-family: "GDS Transport", Arial, sans-serif;
+  background: #fff;
+  color: #0b0c0c;
+}
+h1, h2, h3 {
+  color: #1d70b8;
+}
+</style>
