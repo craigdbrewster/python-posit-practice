@@ -8,8 +8,11 @@ website:
       - href: index.qmd
         text: Home
         
-      - href: demo1-pie-chart.qmd
-        text: Pie Chart
+      - href: scratchpad.qmd
+        text: Scratchpad
+        
+      - href: charts-and-graphs.qmd
+        text: Charts and graphs
 
 format:
   html:
