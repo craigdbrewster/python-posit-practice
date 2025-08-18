@@ -5,7 +5,7 @@ format:
     toc: false
 ---
 
-<h1 class="govuk-heading-xl">FinancialPress – Demo</h1>
+<h1 class="govuk-heading-xl">Python and Posit – Demo</h1>
 
 <p class="govuk-body">
   This Quarto site is styled with the UK Government Design System (GOV.UK Frontend).
