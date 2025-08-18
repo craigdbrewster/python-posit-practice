@@ -3,8 +3,21 @@ title: "Home"
 format: html
 ---
 
+<div class="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <img src="images/hmrc-logo.png" alt="HM Revenue and Customs" style="height:60px;">
+    </div>
+    <div class="govuk-header__content">
+      <h1 class="govuk-header__title">HM Revenue and Customs Training Demos</h1>
+    </div>
+  </div>
+</div>
+
 # Welcome
 
-This site contains demo pages for HMRC Training. Use the navigation bar to explore examples of charts and analyses using R and Python.
+This site contains demo pages for HMRC Training, following GDS standards.  
+Use the navigation bar to explore examples of charts and analyses using R and Python.
 
 - [Demo 1 - Pie Chart](demo1-pie-chart.qmd)
+- [Requirements](requirements.qmd)
