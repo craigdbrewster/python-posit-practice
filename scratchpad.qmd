@@ -8,7 +8,7 @@ format: html
    <a class="govuk-breadcrumbs__link" href="index.qmd">Home</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-   <a class="govuk-breadcrumbs__link" href="scratchpad.qmd">Scratchpad</a>
+   <span aria-current="page">Scratchpad</span>
   </li>
  </ol>
 </nav>
