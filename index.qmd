@@ -1,26 +1,37 @@
 ---
-format: html
+title: ""        # we'll provide our own GOV.UK-styled heading
+format:
+  html:
+    toc: false
 ---
 
-<header class="govuk-header" role="banner" data-module="govuk-header">
- <div class="govuk-header__container govuk-width-container">
-  <div class="govuk-header__logo">
-   <span class="govuk-header__logotype-text">HM Revenue and Customs</span>
-  </div>
-  <div class="govuk-header__content">
-   <span class="govuk-header__service-name">Python and Posit Training Demos</span>
-  </div>
- </div>
-</header>
+<div class="govuk-width-container">
+  <a class="govuk-skip-link" href="#main-content">Skip to main content</a>
 
-<main class="govuk-main-wrapper govuk-width-container">
- <h1 class="govuk-heading-xl">Welcome</h1>
- <p class="govuk-body">This site contains demo pages for Python and Posit Training, following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank">GDS standards</a>.</p>
- <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-   <h2 class="govuk-heading-l govuk-!-font-weight-bold">Charts</h2>
-   <p class="govuk-body">See how to present data visually using GDS-compliant layouts and charts in Python and R.</p>  
-   <p class="govuk-body govuk-!-margin-bottom-0"><a href="demo1-pie-chart.qmd" class="govuk-link govuk-!-font-weight-bold">Browse our demo pie chart</a></p>
-  </div>
- </div>
-</main>
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">FinancialPress – Demo</h1>
+        <p class="govuk-body">
+          This Quarto site is styled with the UK Government Design System (GOV.UK Frontend).
+          It’s ready to deploy on Posit Connect.
+        </p>
+
+        <p class="govuk-body">
+          <a class="govuk-button" href="demo1-pie-chart.html" role="button" data-module="govuk-button">
+            View pie chart demo
+          </a>
+        </p>
+
+        <h2 class="govuk-heading-l">Notes</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Bootstrap is disabled to avoid CSS conflicts.</li>
+          <li>GOV.UK CSS/JS are loaded via <code>gds-header.html</code> and initialised on load.</li>
+          <li>Wrap pages in <code>govuk-width-container</code> and <code>govuk-main-wrapper</code> for layout.</li>
+        </ul>
+
+      </div>
+    </div>
+  </main>
+</div>
