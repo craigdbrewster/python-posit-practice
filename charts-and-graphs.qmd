@@ -13,9 +13,9 @@ format: html
  </ol>
 </nav>
 
-# Charts and Graphs
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Charts and Graphs</h1>
 
-Craig's Coding in 20 Years
+<p class="govuk-body">Craig's Coding in 20 Years</p>
 
 ```{python}
 #| echo: false
