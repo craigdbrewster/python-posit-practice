@@ -2,7 +2,7 @@
 format: html
 ---
 
-# Simple Pie Chart
+# Charts and Graphs
 
 Craig's Coding in 20 Years
 
