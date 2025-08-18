@@ -3,16 +3,13 @@ title: "Home"
 format: html
 ---
 
-<div class="gem-c-organisation-logo brand--hm-revenue-customs">
-    <div class="gem-c-organisation-logo__container gem-c-organisation-logo__crest gem-c-organisation-logo__crest--hmrc brand__border-color">
-      <span class="gem-c-organisation-logo__name">HM Revenue<br>&amp; Customs</span>
-    </div>
-</div>
-<div class="govuk-header__content">
-  <h1 class="govuk-header__title">Python and Posit Training Demos</h1>
+<div class="gem-c-organisation-logo__container gem-c-organisation-logo__crest gem-c-organisation-logo__crest--hmrc brand__border-color">
+  <span class="gem-c-organisation-logo__name">HM Revenue<br>&amp; Customs</span>
 </div>
 
-This site contains demo pages for Python and Posit Training, following GDS standards.
+# Python and Posit Training Demos
+
+This site contains demo pages for Python and Posit Training, following GDS standards.  
 Use the navigation bar to explore examples of charts and analyses using R and Python.
 
 - [Demo 1 - Pie Chart](demo1-pie-chart.qmd)
