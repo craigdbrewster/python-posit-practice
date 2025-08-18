@@ -2,18 +2,43 @@
 format: html
 ---
 
-<div class="gem-c-organisation-logo brand--hm-revenue-customs">
- <div class="gem-c-organisation-logo__container gem-c-organisation-logo__crest gem-c-organisation-logo__crest--hmrc brand__border-color">
-  <span class="gem-c-organisation-logo__name">HM Revenue<br>&amp; Customs</span>
- </div>
+<div class="gem-c-organisation-logo brand--hm-revenue-customs govuk-!-margin-bottom-6">
+  <div class="gem-c-organisation-logo__container gem-c-organisation-logo__crest gem-c-organisation-logo__crest--hmrc brand__border-color">
+    <span class="gem-c-organisation-logo__name">HM Revenue<br>&amp; Customs</span>
+  </div>
 </div>
 
-<p class="govuk-body">This site contains demo pages for Python and Posit Training, following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank">GDS standards</a>.</p>
+<p class="govuk-body">
+  This site contains demo pages for Python and Posit Training, following
+  <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank">GDS standards</a>.
+</p>
 
 <div class="govuk-grid-row">
- <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Charts</h2>
-  <p class="govuk-body">See how to present data visually using GDS-compliant layouts and charts in Python and R.</p>  
-  <p class="govuk-body govuk-!-margin-bottom-0"><a href="demo1-pie-chart.qmd" class="govuk-link govuk-!-font-weight-bold">Browse our demo pie chart</a></p>
- </div>
+
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+    <h2 class="govuk-heading-l govuk-!-font-weight-bold">Charts</h2>
+    <p class="govuk-body">
+      See how to present data visually using GDS-compliant layouts and charts in Python and R.
+    </p>
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      <a href="sharts-and-graphs.qmd" class="govuk-link govuk-!-font-weight-bold">Charts and Graphs</a>
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+    <h2 class="govuk-heading-l govuk-!-font-weight-bold">Placeholder 2</h2>
+    <p class="govuk-body">Placeholder content for a second block.</p>
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      <a href="#" class="govuk-link govuk-!-font-weight-bold">Learn more</a>
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+    <h2 class="govuk-heading-l govuk-!-font-weight-bold">Placeholder 3</h2>
+    <p class="govuk-body">Placeholder content for a third block.</p>
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      <a href="#" class="govuk-link govuk-!-font-weight-bold">Learn more</a>
+    </p>
+  </div>
+
 </div>
