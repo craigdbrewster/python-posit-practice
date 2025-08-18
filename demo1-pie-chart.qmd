@@ -16,14 +16,15 @@ colors = ['#1d70b8', '#b1b4b6']
 
 fig, ax = plt.subplots()
 ax.pie(
-    sizes, 
-    labels=labels, 
-    colors=colors, 
-    autopct='%1.1f%%', 
+    sizes,
+    labels=labels,
+    colors=colors,
+    autopct='%1.1f%%',
     startangle=90,
-    textprops={'fontsize': 12, 'color': '#0b0c0c'}  # GDS black for text
+    textprops={'fontsize': 12, 'color': '#0b0c0c'}
 )
 ax.axis('equal')
-plt.title("Craig's Coding in 20 Years", fontsize=16, color='#1d70b8')
-fig  # Only this, no plt.show()
+ax.set_title("Craig's Coding in 20 Years", fontsize=16, color='#1d70b8')
+
+fig 
 ```
