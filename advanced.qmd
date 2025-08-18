@@ -4,7 +4,7 @@
    <a class="govuk-breadcrumbs__link" href="index.qmd">Home</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-   <span aria-current="page">Scratchpad</span>
+   <span aria-current="page">Advanced</span>
   </li>
  </ol>
 </nav>
