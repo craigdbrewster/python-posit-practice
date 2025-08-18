@@ -4,12 +4,14 @@ project:
 website:
   title: "HM Revenue and Customs"
   navbar:
-    logo: images/hmrc-logo.png
+    # You can remove the 'logo:' line if using logo in page HTML
     left:
       - href: index.qmd
         text: Home
       - href: demo1-pie-chart.qmd
         text: Demo 1 - Pie Chart
+      - href: requirements.qmd
+        text: Requirements
 
 format:
   html:
@@ -17,5 +19,4 @@ format:
     include-in-header: gds-header.html
 
 execute:
-  enabled: true
-  echo: true
+  echo: false  # Hide code by default, if desired
