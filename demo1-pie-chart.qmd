@@ -4,7 +4,7 @@ format: html
 
 # Demo 1 - Simple Pie Chart
 
-This page demonstrates a simple pie chart using GDS-compliant colours and fonts.
+This page demonstrates a simple pie chart.
 
 ```{python}
 #| echo: false
