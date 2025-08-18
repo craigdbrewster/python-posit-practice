@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "HMRC Training Demos"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: demo1-pie-chart.qmd
+        text: Demo 1 - Pie Chart
+
+format:
+  html:
+    toc: true
+
+execute:
+  enabled: true
+  echo: true
