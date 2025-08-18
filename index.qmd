@@ -22,8 +22,7 @@ format: html
 <main class="govuk-main-wrapper govuk-width-container">
   <h1 class="govuk-heading-xl">Welcome</h1>
   <p class="govuk-body">
-    This site contains demo pages for Python and Posit Training, following <a class="govuk-link" href="https://design-system.service.gov.uk/">GDS standards</a>.
-    Use the navigation bar to explore examples of charts and analyses using R and Python.
+    This site contains demo pages for Python and Posit Training, following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank">GDS standards</a>.
   </p>
 
   <!-- GDS Grid Example for Demo Link -->
