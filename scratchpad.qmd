@@ -13,4 +13,6 @@ format: html
  </ol>
 </nav>
 
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Scratchpad</h1>
+
 print("Hello, world!")
