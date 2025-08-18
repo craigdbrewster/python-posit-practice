@@ -8,7 +8,7 @@ website:
       - href: index.qmd
         text: Home
         
-      - href: demo1-pie-chart.qmd.qmd
+      - href: demo1-pie-chart.qmd
         text: Pie Chart
 
 format:
