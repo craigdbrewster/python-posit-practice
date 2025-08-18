@@ -1,5 +1,4 @@
 ---
-title: "Demo 1 - Simple pie chart"
 format: html
 ---
 
@@ -8,13 +7,12 @@ format: html
 This page demonstrates a simple pie chart using GDS-compliant colours and fonts.
 
 ```{python}
+#| echo: false
 import matplotlib.pyplot as plt
 
 labels = ['Craig Actually Coded', "Craig Should've Coded"]
 sizes = [1, 99]
 colors = ['#1d70b8', '#b1b4b6']
-
-plt.rcParams['font.family'] = 'Arial'
 
 fig, ax = plt.subplots()
 ax.pie(
