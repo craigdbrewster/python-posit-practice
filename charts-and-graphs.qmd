@@ -2,6 +2,17 @@
 format: html
 ---
 
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+ <ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+   <a class="govuk-breadcrumbs__link" href="index.qmd">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+   <a class="govuk-breadcrumbs__link" href="charts-and-graphs.qmd">Charts and Graphs</a>
+  </li>
+ </ol>
+</nav>
+
 # Charts and Graphs
 
 Craig's Coding in 20 Years
