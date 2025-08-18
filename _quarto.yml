@@ -16,4 +16,6 @@ format:
     theme: none
     page-layout: full
     include-in-header: gds-header.html
+    include-before-body: gds-wrapper-start.html
+    include-after-body: gds-wrapper-end.html
     body-attrs: 'class="govuk-template__body"'
