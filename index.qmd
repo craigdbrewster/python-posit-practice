@@ -8,7 +8,7 @@ format: html
  </div>
 </div>
 
-<h1 class="gem-c-heading__text govuk-heading-xl">Python and Posit Training</h1>
+<h1 class="gem-c-heading__text govuk-heading-xl" govuk-!-margin-bottom-6">Python and Posit Training</h1>
 
 <p class="govuk-body">
  This site contains demo pages I’ve created to train myself in Python and Posit, while following
