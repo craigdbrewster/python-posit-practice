@@ -9,6 +9,6 @@
  </ol>
 </nav>
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Scratchpad</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Advanced</h1>
 
 <p class="govuk-body">Hold your horses – I'm not quite there yet.</p>
