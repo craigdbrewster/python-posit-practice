@@ -8,15 +8,13 @@ format: html
 This page demonstrates a simple pie chart using GDS-compliant colours and fonts.
 
 ```{python}
-#| echo: false
 import matplotlib.pyplot as plt
 
 labels = ['Craig Actually Coded', "Craig Should've Coded"]
 sizes = [1, 99]
-# GDS-compliant blue and grey
 colors = ['#1d70b8', '#b1b4b6']
 
-plt.rcParams['font.family'] = 'Arial'  # Closest widely available font to GDS Transport
+plt.rcParams['font.family'] = 'Arial'
 
 fig, ax = plt.subplots()
 ax.pie(
@@ -25,9 +23,9 @@ ax.pie(
     colors=colors, 
     autopct='%1.1f%%', 
     startangle=90,
-    textprops={'fontsize': 12, 'color': '#0b0c0c', 'fontfamily': 'Arial'}  # GDS black for text
+    textprops={'fontsize': 12, 'color': '#0b0c0c', 'fontfamily': 'Arial'}
 )
 ax.axis('equal')
-plt.title("Craig's Coding in 20 Years", fontsize=16, color='#1d70b8', fontfamily='Arial')  # GDS blue for title
-fig
+plt.title("Craig's Coding in 20 Years", fontsize=16, color='#1d70b8', fontfamily='Arial')
+plt.show()
 ```
