@@ -15,10 +15,10 @@ format: html
 
 <div class="govuk-grid-row">
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Words and Numbers</h2>
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">The basics</h2>
   <p class="govuk-body">A hotchpotch of trial-and-error coding samples to test my very basic Python skills.</p>
   <p class="govuk-body">
-    <a href="words-and-numbers.qmd" class="govuk-link govuk-!-font-weight-bold">View Words and bumber examples</a>
+    <a href="the-basics.qmd" class="govuk-link govuk-!-font-weight-bold">View basic examples</a>
   </p>
  </div>
 
