@@ -7,18 +7,6 @@ format: html
 
 This is the main index page for your project.
 
-## Craig's Coding Pie Chart
+## Demos
 
-```{python}
-import matplotlib.pyplot as plt
-
-labels = ['Craig Actually Coded', "Craig Should've Coded"]
-sizes = [1, 99]
-colors = ['#ff9999','#66b3ff']
-
-fig, ax = plt.subplots()
-ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
-ax.axis('equal')
-plt.title("Craig's Coding in 20 Years")
-plt.show()
-```
+- [Demo 1 - Simple pie chart](demo1-pie-chart.qmd)
