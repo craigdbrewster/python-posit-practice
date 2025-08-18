@@ -32,7 +32,7 @@ format: html
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">Charts and Graphs</h2>
   <p class="govuk-body">Experiments in creating charts and graphs with Python, styled to follow GDS standards.</p>
   <p class="govuk-body">
-    <a href="charts.qmd" class="govuk-link govuk-!-font-weight-bold">Explore charts and graphs</a>
+    <a href="charts-and-graphs.qmd" class="govuk-link govuk-!-font-weight-bold">Explore charts and graphs</a>
   </p>
  </div>
 
