@@ -13,18 +13,24 @@ format: html
       </a>
     </div>
     <div class="govuk-header__content">
-      <h1 class="govuk-header__title">Python and Posit Training Demos</h1>
+      <span class="govuk-header__service-name">Python and Posit Training Demos</span>
     </div>
   </div>
 </header>
 
-This site contains demo pages for Python and Posit Training, following GDS standards.  
-Use the navigation bar to explore examples of charts and analyses using R and Python.
+<main class="govuk-main-wrapper govuk-width-container">
+  <h1 class="govuk-heading-xl">Welcome</h1>
+  <p class="govuk-body">
+    This site contains demo pages for Python and Posit training, following <a class="govuk-link" href="https://design-system.service.gov.uk/">GDS standards</a>.
+    Use the navigation bar to explore examples of charts and analyses using R and Python.
+  </p>
 
-- [Demo 1 - Pie Chart](demo1-pie-chart.qmd)
-
-
-<div class="gem-c-organisation-logo__container gem-c-organisation-logo__crest gem-c-organisation-logo__crest--hmrc brand__border-color">
-  <span class="gem-c-organisation-logo__name">HM Revenue<br>&amp; Customs</span>
-</div>
-
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a href="demo1-pie-chart.qmd" class="govuk-link">Demo 1 – Pie Chart</a>
+    </li>
+    <li>
+      <a href="requirements.qmd" class="govuk-link">Requirements</a>
+    </li>
+  </ul>
+</main>
