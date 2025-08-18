@@ -21,3 +21,6 @@ fig, ax = plt.subplots()
 ax.pie(sizes, labels=labels, autopct="%1.0f%%", startangle=90)
 ax.axis("equal")
 plt.show()
+```
+
+<p class="govuk-body"><a class="govuk-link" href="index.html">Back to home</a></p> 
