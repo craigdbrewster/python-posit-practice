@@ -3,16 +3,19 @@ project:
 
 website:
   title: "GDS + Quarto Demo"
-  navbar: false   # we'll use GOV.UK header styles instead of Quarto's navbar
+  navbar: false
 
-# Global HTML settings
 lang: en-GB
 
 format:
   html:
-    theme: none            # disable Bootstrap so it won't clash with GOV.UK styles
+    theme: none
     toc: false
-    page-layout: full      # let GOV.UK's container control the page width
+    page-layout: full
     include-in-header:
-      - gds-header.html    # loads GOV.UK Frontend CSS/JS and init script
+      - gds-header.html
+    include-before-body:
+      - govuk-wrapper-start.html
+    include-after-body:
+      - govuk-wrapper-end.html
     body-attrs: 'class="govuk-template__body"'
