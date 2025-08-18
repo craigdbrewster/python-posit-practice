@@ -39,10 +39,7 @@ print(((1 + 3) * (9 - 2) / 2) ** 2)
 #| echo: false
 test_var_text = "Hello again!"
 test_var_formula = 4 + 5
-print(test_var_Formula)
+print(test_var_formula)
 print(test_var_text)
 ```
 </div>
-
-test_var = 4 + 5
-print(test_var)
