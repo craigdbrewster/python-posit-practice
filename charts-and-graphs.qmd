@@ -2,7 +2,7 @@
 format: html
 ---
 
-# Charts and Graphs
+# Charts and graphs
 
 Craig's Coding in 20 Years
 
