@@ -1,12 +1,18 @@
 ---
 title: "Index"
-format: html
+format: 
+  html:
+    css: "https://assets.publishing.service.gov.uk/government-frontend/govuk-frontend-4.8.0.min.css"
 ---
 
-# Welcome to the Index Page
+# Welcome
 
 This is the main index page for Craig's learning demos.
 
 ## Demos
 
-- [Demo 1 - Simple pie chart](demo1-pie-chart.qmd)
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+    <a href="demo1-pie-chart.qmd" class="govuk-link">Demo 1 – Simple pie chart</a>
+  </li>
+</ul>
