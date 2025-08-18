@@ -18,5 +18,5 @@ fig, ax = plt.subplots()
 ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
 ax.axis('equal')
 plt.title("Craig's Coding in 20 Years")
-plt.show()
+fig  # <- This line ensures the chart displays in Quarto/Python environments
 ```
