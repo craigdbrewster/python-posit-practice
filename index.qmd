@@ -1,18 +1,10 @@
 ---
-title: "Index"
-format: 
-  html:
-    css: "https://assets.publishing.service.gov.uk/government-frontend/govuk-frontend-4.8.0.min.css"
+title: "Home"
+format: html
 ---
 
 # Welcome
 
-This is the main index page for Craig's learning demos.
+This site contains demo pages for HMRC Training. Use the navigation bar to explore examples of charts and analyses using R and Python.
 
-## Demos
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>
-    <a href="demo1-pie-chart.qmd" class="govuk-link">Demo 1 – Simple pie chart</a>
-  </li>
-</ul>
+- [Demo 1 - Pie Chart](demo1-pie-chart.qmd)
