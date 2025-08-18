@@ -4,7 +4,7 @@ format: html
 
 # Simple Pie Chart
 
-This page demonstrates a simple pie chart.
+Craig's Coding in 20 Years
 
 ```{python}
 #| echo: false
@@ -24,7 +24,6 @@ ax.pie(
     textprops={'fontsize': 12, 'color': '#0b0c0c'}
 )
 ax.axis('equal')
-ax.set_title("Craig's Coding in 20 Years", fontsize=16, color='#1d70b8')
 
 plt.show()
 plt.close(fig)
