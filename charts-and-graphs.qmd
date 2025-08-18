@@ -69,3 +69,4 @@ plt.close(fig)
   </tr>
  </tbody>
 </table>
+
