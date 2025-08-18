@@ -16,7 +16,7 @@ website:
 format:
   html:
     toc: true
-    css: styles.css   # Add this line to include your custom stylesheet
+    include-in-header: gds-header.html
 
 execute:
   enabled: true
