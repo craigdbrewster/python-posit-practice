@@ -8,6 +8,8 @@ format: html
  </div>
 </div>
 
+<h1 class="govuk-heading-l govuk-!-font-weight-bold">Pythin and Posit Training</h1>
+
 <p class="govuk-body">
  This site contains demo pages I’ve created to train myself in Python and Posit, while following
  <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">
