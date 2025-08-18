@@ -8,12 +8,12 @@ format: html
    <a class="govuk-breadcrumbs__link" href="index.qmd">Home</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-   <span aria-current="page">Scratchpad</span>
+   <span aria-current="page">Words and Numbers</span>
   </li>
  </ol>
 </nav>
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Scratchpad</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Words and Numbers</h1>
 
 <div class="govuk-body govuk-!-margin-bottom-6">
  <h3>Strings</h3>
