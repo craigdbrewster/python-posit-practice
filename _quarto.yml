@@ -13,4 +13,7 @@ website:
 
 format:
   html:
+    theme: none
+    page-layout: full
     include-in-header: gds-header.html
+    body-attrs: 'class="govuk-template__body"'
