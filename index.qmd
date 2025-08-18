@@ -3,8 +3,10 @@ title: "Home"
 format: html
 ---
 
-<div class="govuk-header__logo">
-  <img src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/24/HMRC-Logo.png" alt="HM Revenue and Customs" style="height:60px;">
+<div class="gem-c-organisation-logo brand--hm-revenue-customs">
+    <div class="gem-c-organisation-logo__container gem-c-organisation-logo__crest gem-c-organisation-logo__crest--hmrc brand__border-color">
+      <span class="gem-c-organisation-logo__name">HM Revenue<br>&amp; Customs</span>
+    </div>
 </div>
 <div class="govuk-header__content">
   <h1 class="govuk-header__title">HM Revenue and Customs Training Demos</h1>
@@ -16,4 +18,3 @@ This site contains demo pages for HMRC Training, following GDS standards.
 Use the navigation bar to explore examples of charts and analyses using R and Python.
 
 - [Demo 1 - Pie Chart](demo1-pie-chart.qmd)
-- [Requirements](requirements.qmd)
