@@ -3,18 +3,14 @@ title: "Home"
 format: html
 ---
 
-<div class="govuk-header">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__logo">
-      <img src="images/hmrc-logo.png" alt="HM Revenue and Customs" style="height:60px;">
-    </div>
-    <div class="govuk-header__content">
-      <h1 class="govuk-header__title">HM Revenue and Customs Training Demos</h1>
-    </div>
-  </div>
+<div class="govuk-header__logo">
+  <img src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/24/HMRC-Logo.png" alt="HM Revenue and Customs" style="height:60px;">
+</div>
+<div class="govuk-header__content">
+  <h1 class="govuk-header__title">HM Revenue and Customs Training Demos</h1>
 </div>
 
-# Welcome
+Welcome
 
 This site contains demo pages for HMRC Training, following GDS standards.  
 Use the navigation bar to explore examples of charts and analyses using R and Python.
