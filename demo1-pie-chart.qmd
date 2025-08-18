@@ -5,18 +5,29 @@ format: html
 
 # Demo 1 - Simple Pie Chart
 
-This page demonstrates a simple pie chart.
+This page demonstrates a simple pie chart using GDS-compliant colours and fonts.
 
 ```{python}
+#| echo: false
 import matplotlib.pyplot as plt
 
 labels = ['Craig Actually Coded', "Craig Should've Coded"]
 sizes = [1, 99]
-colors = ['#ff9999','#66b3ff']
+# GDS-compliant blue and grey
+colors = ['#1d70b8', '#b1b4b6']
+
+plt.rcParams['font.family'] = 'Arial'  # Closest widely available font to GDS Transport
 
 fig, ax = plt.subplots()
-ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
+ax.pie(
+    sizes, 
+    labels=labels, 
+    colors=colors, 
+    autopct='%1.1f%%', 
+    startangle=90,
+    textprops={'fontsize': 12, 'color': '#0b0c0c', 'fontfamily': 'Arial'}  # GDS black for text
+)
 ax.axis('equal')
-plt.title("Craig's Coding in 20 Years")
-fig  # <- This line ensures the chart displays in Quarto/Python environments
+plt.title("Craig's Coding in 20 Years", fontsize=16, color='#1d70b8', fontfamily='Arial')  # GDS blue for title
+fig
 ```
