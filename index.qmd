@@ -18,7 +18,7 @@ format: html
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">The basics</h2>
   <p class="govuk-body">A hotchpotch of trial-and-error coding samples to test the most basic of Python skills.</p>
   <p class="govuk-body">
-    <a href="the-basics/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the basic examples</a>
+    <a href="basics/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the basic examples</a>
   </p>
  </div>
 
