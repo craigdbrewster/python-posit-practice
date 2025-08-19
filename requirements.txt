@@ -1,7 +1,8 @@
 jupyter
+matplotlib
 notebook
 nbformat
+ipykernel
 shiny
 requests
 beautifulsoup4
-ipykernel
