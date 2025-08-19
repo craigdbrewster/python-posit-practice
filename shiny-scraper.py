@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from keybert import KeyBERT
 import re
 
-# Helper function to read HTML file contents
 def read_html_file(filename):
     try:
         with open(filename, "r", encoding="utf-8") as f:
@@ -12,7 +11,6 @@ def read_html_file(filename):
     except Exception as e:
         return f"<!-- Error loading {filename}: {e} -->"
 
-# Filenames for external HTML includes
 HEADER_HTML_FILE = "gds-header.html"
 WRAPPER_START_HTML_FILE = "gds-wrapper-start.html"
 WRAPPER_END_HTML_FILE = "gds-wrapper-end.html"
@@ -23,15 +21,24 @@ wrapper_end_html = read_html_file(WRAPPER_END_HTML_FILE)
 
 kw_model = KeyBERT()
 
+def clean_sentence(sentence):
+    s = sentence.strip()
+    s = re.sub(r"\s+", " ", s)
+    if len(s) < 30: return None
+    if re.search(r"(Attribution|Live|Watch:|Comments \d{3,}|BBC Verify|click here|More on)", s, re.IGNORECASE):
+        return None
+    return s
+
 def find_representative_sentence(text, keyword):
-    # Split text into sentences
-    # Handles both .!? and newlines as sentence boundaries for robustness
     sentences = re.split(r'(?<=[.!?])\s+|\n+', text)
-    # Look for a sentence containing the keyword (case-insensitive, word boundary)
+    candidates = []
     for s in sentences:
         if re.search(r'\b' + re.escape(keyword) + r'\b', s, re.IGNORECASE):
-            return s.strip()
-    # If not found, fallback to a generic phrase
+            cleaned = clean_sentence(s)
+            if cleaned:
+                candidates.append(cleaned)
+    if candidates:
+        return min(candidates, key=len)
     return f"This page covers the theme '{keyword}'."
 
 def extract_themes(text, top_n=5):
@@ -41,7 +48,6 @@ def extract_themes(text, top_n=5):
     conversational = []
     for kw, _ in keywords:
         sent = find_representative_sentence(text, kw)
-        # Make a conversational summary for each theme
         conversational.append(f"**Theme: {kw}**\n{sent}")
     return "\n\n".join(conversational)
 
@@ -79,7 +85,7 @@ app_ui = ui.page_fluid(
             class_="govuk-form-group"
         ),
         ui.tags.div(
-            ui.input_text_area("themes", "Content Themes", value="", rows=8, width="100%"),
+            ui.input_text_area("themes", "Content Themes (Conversational)", value="", rows=8, width="100%"),
             class_="govuk-form-group"
         ),
         ui.tags.div(
