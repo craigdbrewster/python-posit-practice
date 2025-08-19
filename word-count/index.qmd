@@ -4,11 +4,11 @@
    <a class="govuk-breadcrumbs__link" href="../index.qmd">Home</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-   <span aria-current="page">Advanced</span>
+   <span aria-current="page">Word Count</span>
   </li>
  </ol>
 </nav>
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Advanced</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Word Count</h1>
 
 <p class="govuk-body">Hold your horses – I'm not quite there yet.</p>
