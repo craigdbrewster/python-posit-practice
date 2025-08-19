@@ -1,4 +1,4 @@
 -r ../requirements.base.txt
-flask
+shiny
 requests
 beautifulsoup4
