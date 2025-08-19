@@ -1,46 +1,37 @@
-from shiny import App, ui, render
+from shiny import App, ui, render, reactive
 import requests
 from bs4 import BeautifulSoup
-from collections import Counter
-import re
 
 app_ui = ui.page_fluid(
-    ui.h2("Word Count from URL"),
-    ui.input_text("url", "Enter a URL", placeholder="https://www.gov.uk"),
-    ui.input_action_button("go", "Count Words"),
-    ui.output_ui("result")
+    ui.h2("Webpage Word Scraper"),
+    ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/"),
+    ui.input_action_button("scrape", "Scrape page"),
+    ui.input_text_area("words", "Scraped Words", value="", rows=15, width="100%", readonly=True)
 )
 
+def get_page_words(url):
+    try:
+        resp = requests.get(url, timeout=10)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        # Remove scripts, styles, etc.
+        for tag in soup(["script", "style", "noscript"]):
+            tag.decompose()
+        texts = soup.stripped_strings
+        words = " ".join(texts)
+        return words
+    except Exception as e:
+        return f"Error: {e}"
+
 def server(input, output, session):
-    @output
-    @render.ui
-    def result():
-        if input.go() == 0:
-            return None
+    @reactive.effect
+    @reactive.event(input.scrape)
+    def _():
         url = input.url()
-        if not url:
-            return ui.p("Please enter a URL.")
-        try:
-            resp = requests.get(url, timeout=10)
-            resp.raise_for_status()
-            soup = BeautifulSoup(resp.text, "html.parser")
-            for script in soup(["script", "style"]):
-                script.extract()
-            text = soup.get_text(separator=" ")
-            words = re.findall(r"\b\w+\b", text.lower())
-            total = len(words)
-            counter = Counter(words)
-            common = counter.most_common(20)
-            table = ui.HTML("<table><tr><th>Word</th><th>Count</th></tr>")
-            for word, count in common:
-                table.add_child(ui.HTML(f"<tr><td>{word}</td><td>{count}</td></tr>"))
-            table.add_child(ui.HTML("</table>"))
-            return [
-                ui.h3(f"Total words: {total}"),
-                ui.h4("Top 20 most common words"),
-                table
-            ]
-        except Exception as e:
-            return ui.p(f"Error: {e}")
+        if url:
+            words = get_page_words(url)
+            ui.update_text_area("words", value=words)
+        else:
+            ui.update_text_area("words", value="Please enter a URL.")
 
 app = App(app_ui, server)
