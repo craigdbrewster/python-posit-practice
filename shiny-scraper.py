@@ -64,7 +64,7 @@ def count_words(text):
 app_ui = ui.page_fluid(
     ui.HTML(header_html),
     ui.HTML(wrapper_start_html),
-    ui.h1("Word Count", class_="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6"),
+    ui.h1("Content Scraper", class_="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6"),
     ui.tags.form(
         ui.tags.div(
             ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/", width="100%"),
