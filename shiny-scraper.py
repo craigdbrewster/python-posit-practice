@@ -6,7 +6,7 @@ app_ui = ui.page_fluid(
     ui.h2("Webpage Word Scraper"),
     ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/"),
     ui.input_action_button("scrape", "Scrape page"),
-    ui.input_text_area("words", "Scraped Words", value="", rows=15, width="100%", readonly=True)
+    ui.input_text_area("words", "Scraped Words", value="", rows=15, width="100%")
 )
 
 def get_page_words(url):
