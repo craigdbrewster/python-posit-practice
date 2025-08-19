@@ -31,7 +31,7 @@ format: html
  </div>
 
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Advanced</h2>
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Word Count</h2>
   <p class="govuk-body">Attempt at a more advanced tool that enables its users to calculate the word count of any webpage.</p>
   <p class="govuk-body">
     <a href="word-count/index.qmd" class="govuk-link govuk-!-font-weight-bold">See the word count demo</a>
