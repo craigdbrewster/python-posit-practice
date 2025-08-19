@@ -23,23 +23,27 @@ wrapper_end_html = read_html_file(WRAPPER_END_HTML_FILE)
 
 kw_model = KeyBERT()
 
+def find_representative_sentence(text, keyword):
+    # Split text into sentences
+    # Handles both .!? and newlines as sentence boundaries for robustness
+    sentences = re.split(r'(?<=[.!?])\s+|\n+', text)
+    # Look for a sentence containing the keyword (case-insensitive, word boundary)
+    for s in sentences:
+        if re.search(r'\b' + re.escape(keyword) + r'\b', s, re.IGNORECASE):
+            return s.strip()
+    # If not found, fallback to a generic phrase
+    return f"This page covers the theme '{keyword}'."
+
 def extract_themes(text, top_n=5):
     keywords = kw_model.extract_keywords(text, top_n=top_n, stop_words="english")
-    return themes_to_sentences(keywords)
-
-def themes_to_sentences(keywords):
     if not keywords:
         return "No major themes detected."
-    themes = [kw for kw, _ in keywords]
-    if len(themes) == 1:
-        return f"This page is mainly about {themes[0]}."
-    elif len(themes) == 2:
-        return f"The main themes are {themes[0]} and {themes[1]}."
-    elif len(themes) > 2:
-        theme_str = ", ".join(themes[:-1]) + f", and {themes[-1]}"
-        return f"This page is mainly about {theme_str}."
-    else:
-        return "No major themes detected."
+    conversational = []
+    for kw, _ in keywords:
+        sent = find_representative_sentence(text, kw)
+        # Make a conversational summary for each theme
+        conversational.append(f"**Theme: {kw}**\n{sent}")
+    return "\n\n".join(conversational)
 
 def get_page_words(url):
     try:
@@ -75,7 +79,7 @@ app_ui = ui.page_fluid(
             class_="govuk-form-group"
         ),
         ui.tags.div(
-            ui.input_text_area("themes", "Content Themes (Conversational)", value="", rows=4, width="100%"),
+            ui.input_text_area("themes", "Content Themes", value="", rows=8, width="100%"),
             class_="govuk-form-group"
         ),
         ui.tags.div(
