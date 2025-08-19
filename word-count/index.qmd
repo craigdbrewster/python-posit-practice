@@ -14,3 +14,46 @@ format: html
 </nav>
 
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Word Count</h1>
+
+<div class="govuk-form-group">
+  <label for="userText" class="govuk-label govuk-label--m">
+    Enter your text
+  </label>
+  <span id="userText-hint" class="govuk-hint">
+    The number of words will update as you type.
+  </span>
+  <textarea
+    id="userText"
+    name="userText"
+    class="govuk-textarea"
+    aria-describedby="userText-hint wordCount"
+    rows="8"
+    style="width:100%; max-width:100%;"
+    spellcheck="true"
+    autocomplete="off"
+    inputmode="text"
+  ></textarea>
+</div>
+<div
+  id="wordCount"
+  class="govuk-inset-text"
+  aria-live="polite"
+  style="font-weight:bold;"
+  tabindex="0"
+>
+  Word count: 0
+</div>
+
+<script>
+function countWords(str) {
+  str = str.trim();
+  if (!str) return 0;
+  // Split on any sequence of whitespace
+  return str.split(/\s+/).length;
+}
+const textarea = document.getElementById('userText');
+const countDisplay = document.getElementById('wordCount');
+textarea.addEventListener('input', function() {
+  countDisplay.textContent = "Word count: " + countWords(this.value);
+});
+</script>
