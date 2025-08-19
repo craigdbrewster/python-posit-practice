@@ -3,3 +3,6 @@ matplotlib
 shiny
 requests
 beautifulsoup4
+keybert
+sentence-transformers
+scikit-learn
