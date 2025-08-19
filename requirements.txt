@@ -1,0 +1,6 @@
+jupyter
+notebook
+shiny
+requests
+beautifulsoup4
+ipykernel
