@@ -12,50 +12,42 @@
 <h1 class="govuk-heading-l">Word Count</h1>
 
 <form method="POST" novalidate>
-  <div class="govuk-form-group {% if error %}govuk-form-group--error{% endif %}">
-    <label class="govuk-label" for="url">
-      Enter a URL
-    </label>
-    <span id="url-hint" class="govuk-hint">
-      Example: https://www.gov.uk
-    </span>
+ <div class="govuk-form-group {% if error %}govuk-form-group--error{% endif %}">
+  <label class="govuk-label" for="url">Enter a URL</label>
+  <span id="url-hint" class="govuk-hint">Example: https://www.gov.uk</span>
 
-    {% if error %}
-      <p id="url-error" class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span> {{ error }}
-      </p>
+  {% if error %}
+  <p id="url-error" class="govuk-error-message">
+   <span class="govuk-visually-hidden">Error:</span> {{ error }}
+  </p>
     {% endif %}
 
-    <input class="govuk-input {% if error %}govuk-input--error{% endif %}" 
-           id="url" name="url" type="text" 
-           spellcheck="false" aria-describedby="url-hint {% if error %}url-error{% endif %}" 
-           required>
-  </div>
+  <input class="govuk-input {% if error %}govuk-input--error{% endif %}" id="url" name="url" type="text" spellcheck="false" aria-describedby="url-hint {% if error %}url-error{% endif %}" required>
+ </div>
 
-  <button type="submit" class="govuk-button" data-module="govuk-button">
-    Count words
-  </button>
+ <button type="submit" class="govuk-button" data-module="govuk-button">Count words</button>
 </form>
 
 {% if results %}
-  <h2 class="govuk-heading-m">Results</h2>
-  <p class="govuk-body"><strong>Total words:</strong> {{ results.total_words }}</p>
+<h2 class="govuk-heading-m">Results</h2>
+<p class="govuk-body"><strong>Total words:</strong> {{ results.total_words }}</p>
 
-  <h3 class="govuk-heading-s">Top 20 most common words</h3>
-  <table class="govuk-table">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Word</th>
-        <th scope="col" class="govuk-table__header">Count</th>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      {% for word, count in results.common %}
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">{{ word }}</td>
-        <td class="govuk-table__cell">{{ count }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<h3 class="govuk-heading-s">Top 20 most common words</h3>
+
+<table class="govuk-table">
+ <thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+   <th scope="col" class="govuk-table__header">Word</th>
+   <th scope="col" class="govuk-table__header">Count</th>
+  </tr>
+ </thead>
+ <tbody class="govuk-table__body">
+ {% for word, count in results.common %}
+  <tr class="govuk-table__row">
+   <td class="govuk-table__cell">{{ word }}</td>
+   <td class="govuk-table__cell">{{ count }}</td>
+  </tr>
+  {% endfor %}
+ </tbody>
+</table>
 {% endif %}
