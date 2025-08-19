@@ -3,16 +3,37 @@ import requests
 from bs4 import BeautifulSoup
 from keybert import KeyBERT
 import re
+import os
+
+# Read GOV.UK header and wrapper HTML files
+def read_html_file(filename):
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            return f.read()
+    except Exception as e:
+        return f"<!-- Error loading {filename}: {e} -->"
+
+# Assuming these files are in the same directory as this script
+HEADER_HTML_FILE = "header.html"
+WRAPPER_START_HTML_FILE = "wrapper-start.html"
+WRAPPER_END_HTML_FILE = "wrapper-end.html"
+
+header_html = read_html_file(HEADER_HTML_FILE)
+wrapper_start_html = read_html_file(WRAPPER_START_HTML_FILE)
+wrapper_end_html = read_html_file(WRAPPER_END_HTML_FILE)
 
 kw_model = KeyBERT()
 
 app_ui = ui.page_fluid(
-    ui.h2("Webpage Word Scraper"),
-    ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/"),
-    ui.input_action_button("scrape", "Scrape page"),
-    ui.input_text_area("words", "Scraped Words", value="", rows=10, width="100%"),
-    ui.input_text_area("themes", "Common Themes / Keywords (KeyBERT)", value="", rows=4, width="100%"),
-    ui.input_text("wordcount", "Total Word Count", value="", width="30%")
+    ui.HTML(header_html),
+    ui.HTML(wrapper_start_html),
+    ui.h1("Word Count", class_="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6"),
+    ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/", class_="govuk-input"),
+    ui.input_action_button("scrape", "Scrape page", class_="govuk-button"),
+    ui.input_text_area("words", "Scraped Words", value="", rows=10, width="100%", class_="govuk-textarea"),
+    ui.input_text_area("themes", "Common Theme", value="", rows=4, width="100%", class_="govuk-textarea"),
+    ui.input_text("wordcount", "Total Word Count", value="", width="100%", class_="govuk-input"),
+    ui.HTML(wrapper_end_html),  # <-- Now after the form elements
 )
 
 def get_page_words(url):
