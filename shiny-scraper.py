@@ -13,10 +13,10 @@ def read_html_file(filename):
     except Exception as e:
         return f"<!-- Error loading {filename}: {e} -->"
 
-# Assuming these files are in the same directory as this script
-HEADER_HTML_FILE = "header.html"
-WRAPPER_START_HTML_FILE = "wrapper-start.html"
-WRAPPER_END_HTML_FILE = "wrapper-end.html"
+# Filenames for external HTML includes
+HEADER_HTML_FILE = "gds-header.html"
+WRAPPER_START_HTML_FILE = "gds-wrapper-start.html"
+WRAPPER_END_HTML_FILE = "gds-wrapper-end.html"
 
 header_html = read_html_file(HEADER_HTML_FILE)
 wrapper_start_html = read_html_file(WRAPPER_START_HTML_FILE)
@@ -28,12 +28,30 @@ app_ui = ui.page_fluid(
     ui.HTML(header_html),
     ui.HTML(wrapper_start_html),
     ui.h1("Word Count", class_="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6"),
-    ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/", class_="govuk-input"),
-    ui.input_action_button("scrape", "Scrape page", class_="govuk-button"),
-    ui.input_text_area("words", "Scraped Words", value="", rows=10, width="100%", class_="govuk-textarea"),
-    ui.input_text_area("themes", "Common Theme", value="", rows=4, width="100%", class_="govuk-textarea"),
-    ui.input_text("wordcount", "Total Word Count", value="", width="100%", class_="govuk-input"),
-    ui.HTML(wrapper_end_html),  # <-- Now after the form elements
+    # Form section
+    ui.tags.form(
+        ui.tags.div(
+            ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/"),
+            class_="govuk-form-group"
+        ),
+        ui.tags.div(
+            ui.input_action_button("scrape", "Scrape page"),
+            class_="govuk-form-group"
+        ),
+        ui.tags.div(
+            ui.input_text_area("words", "Scraped Words", value="", rows=10, width="100%"),
+            class_="govuk-form-group"
+        ),
+        ui.tags.div(
+            ui.input_text_area("themes", "Common Themes", value="", rows=4, width="100%"),
+            class_="govuk-form-group"
+        ),
+        ui.tags.div(
+            ui.input_text("wordcount", "Total Word Count", value="", width="100%"),
+            class_="govuk-form-group"
+        ),
+    ),
+    ui.HTML(wrapper_end_html)
 )
 
 def get_page_words(url):
@@ -72,10 +90,4 @@ def server(input, output, session):
                 themes = extract_themes(words)
                 ui.update_text_area("themes", value=themes)
                 wc = count_words(words)
-                ui.update_text("wordcount", value=str(wc))
-        else:
-            ui.update_text_area("words", value="Please enter a URL.")
-            ui.update_text_area("themes", value="")
-            ui.update_text("wordcount", value="")
-
-app = App(app_ui, server)
+                ui.update
