@@ -11,7 +11,7 @@ from collections import Counter
 import re
 from shiny import ui, render, reactive
 
-ui.page_fluid(
+app_ui = ui.page_fluid(
     ui.h2("Word Count"),
     ui.input_text("url", "Enter a URL", placeholder="https://www.gov.uk"),
     ui.input_action_button("count", "Count words"),
@@ -19,33 +19,36 @@ ui.page_fluid(
     ui.output_text_verbatim("error")
 )
 
-@render.ui
-def result():
-    if input.count() == 0:
-        return None
-    url = input.url()
-    if not url:
-        return ui.p("Please enter a URL.")
-    try:
-        resp = requests.get(url, timeout=10)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
-        for script in soup(["script", "style"]):
-            script.extract()
-        text = soup.get_text(separator=" ")
-        words = re.findall(r"\b\w+\b", text.lower())
-        total = len(words)
-        counter = Counter(words)
-        common = counter.most_common(20)
-        table = ui.HTML("<table class='govuk-table'><thead><tr><th>Word</th><th>Count</th></tr></thead><tbody>")
-        for word, count in common:
-            table.add_child(ui.HTML(f"<tr><td>{word}</td><td>{count}</td></tr>"))
-        table.add_child(ui.HTML("</tbody></table>"))
-        return [
-            ui.h3(f"Total words: {total}"),
-            ui.h4("Top 20 most common words"),
-            table
-        ]
-    except Exception as e:
-        return ui.p(f"Error: {e}")
+def server(input, output, session):
+    @output
+    @render.ui
+    def result():
+        if input.count() == 0:
+            return None
+        url = input.url()
+        if not url:
+            return ui.p("Please enter a URL.")
+        try:
+            resp = requests.get(url, timeout=10)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
+            for script in soup(["script", "style"]):
+                script.extract()
+            text = soup.get_text(separator=" ")
+            words = re.findall(r"\b\w+\b", text.lower())
+            total = len(words)
+            counter = Counter(words)
+            common = counter.most_common(20)
+            table = ui.HTML("<table class='govuk-table'><thead><tr><th>Word</th><th>Count</th></tr></thead><tbody>")
+            for word, count in common:
+                table.add_child(ui.HTML(f"<tr><td>{word}</td><td>{count}</td></tr>"))
+            table.add_child(ui.HTML("</tbody></table>"))
+            return [
+                ui.h3(f"Total words: {total}"),
+                ui.h4("Top 20 most common words"),
+                table
+            ]
+        except Exception as e:
+            return ui.p(f"Error: {e}")
+
 ```
