@@ -9,7 +9,7 @@
  </ol>
 </nav>
 
-<h1 class="govuk-heading-l">Word Counter</h1>
+<h1 class="govuk-heading-l">Word Count</h1>
 
 <form method="POST" novalidate>
   <div class="govuk-form-group {% if error %}govuk-form-group--error{% endif %}">
