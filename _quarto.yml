@@ -3,16 +3,6 @@ project:
 
 website:
   title: "My Site"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-        
-      - href: scratchpad.qmd
-        text: Scratchpad
-        
-      - href: charts-and-graphs.qmd
-        text: Charts and graphs
 
 format:
   html:
