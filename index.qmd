@@ -8,7 +8,7 @@ format: html
  </div>
 </div>
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Training</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
 
 <p class="govuk-body">This site contains demo pages I’ve created to train myself in Python and Posit, while following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GDS guidelines <span class="govuk-visually-hidden">(opens in a new tab)</span></a> and <a class="govuk-link" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">accessibility standards <span class="govuk-visually-hidden">(opens in a new tab)</span></a>.
 </p>
