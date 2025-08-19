@@ -1,12 +1,5 @@
 jupyter
-<<<<<<< HEAD
 matplotlib
-=======
-matplotlib
-notebook
-nbformat
-ipykernel
 shiny
 requests
 beautifulsoup4
->>>>>>> 173c53e7b8e002c64949a5a1351074e8bf321d50
