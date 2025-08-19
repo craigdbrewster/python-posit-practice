@@ -1,1 +1,1 @@
-# Python and Posit Practice
+# Python and Posit Practice Channel
