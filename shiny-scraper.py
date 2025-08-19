@@ -29,7 +29,7 @@ app_ui = ui.page_fluid(
     ui.h1("Word Count", class_="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6"),
     ui.tags.form(
         ui.tags.div(
-            ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/"),
+            ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/", width="100%"),
             class_="govuk-form-group"
         ),
         ui.tags.div(
