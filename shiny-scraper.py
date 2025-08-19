@@ -3,9 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from keybert import KeyBERT
 import re
-import os
 
-# Read GOV.UK header and wrapper HTML files
+# Helper function to read HTML file contents
 def read_html_file(filename):
     try:
         with open(filename, "r", encoding="utf-8") as f:
@@ -28,7 +27,6 @@ app_ui = ui.page_fluid(
     ui.HTML(header_html),
     ui.HTML(wrapper_start_html),
     ui.h1("Word Count", class_="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6"),
-    # Form section
     ui.tags.form(
         ui.tags.div(
             ui.input_text("url", "Enter URL to scrape:", placeholder="https://www.gov.uk/"),
@@ -90,4 +88,10 @@ def server(input, output, session):
                 themes = extract_themes(words)
                 ui.update_text_area("themes", value=themes)
                 wc = count_words(words)
-                ui.update
+                ui.update_text("wordcount", value=str(wc))
+        else:
+            ui.update_text_area("words", value="Please enter a URL.")
+            ui.update_text_area("themes", value="")
+            ui.update_text("wordcount", value="")
+
+app = App(app_ui, server)
