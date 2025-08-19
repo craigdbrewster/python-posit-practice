@@ -1,30 +1,30 @@
 ---
+title: "Word Count"
 format: html
 engine: shiny
 ---
 
-<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
- <ol class="govuk-breadcrumbs__list">
-  <li class="govuk-breadcrumbs__list-item">
-   <a class="govuk-breadcrumbs__link" href="../index.qmd">Home</a>
-  </li>
-  <li class="govuk-breadcrumbs__list-item">
-   <span aria-current="page">Word Count</span>
-  </li>
- </ol>
-</nav>
-
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Word Count</h1>
-
 ```{python}
+from shiny import App, ui, render
 import requests
 from bs4 import BeautifulSoup
 from collections import Counter
 import re
-from shiny import App, ui, render
 
 app_ui = ui.page_fluid(
-    ui.h2("Word Count"),
+    ui.HTML("""
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../index.qmd">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <span aria-current="page">Word Count</span>
+        </li>
+      </ol>
+    </nav>
+    """),
+    ui.h1("Word Count", class_="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6"),
     ui.input_text("url", "Enter a URL", placeholder="https://www.gov.uk"),
     ui.input_action_button("count", "Count words"),
     ui.output_ui("result"),
