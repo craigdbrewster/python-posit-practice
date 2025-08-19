@@ -1,25 +1,16 @@
 ---
-title: "Minimal Shiny Python"
 format: html
-engine: shiny
 ---
 
-```{python}
-from shiny import App, ui, render
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+ <ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+   <a class="govuk-breadcrumbs__link" href="../index.qmd">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+   <span aria-current="page">Word Count</span>
+  </li>
+ </ol>
+</nav>
 
-app_ui = ui.page_fluid(
-    ui.input_text("text", "Enter some text"),
-    ui.input_action_button("go", "Show"),
-    ui.output_text("result")
-)
-
-def server(input, output, session):
-    @output
-    @render.text
-    def result():
-        if input.go() == 0:
-            return ""
-        return f"You entered: {input.text()}"
-
-app = App(app_ui, server)
-```
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Word Count</h1>
