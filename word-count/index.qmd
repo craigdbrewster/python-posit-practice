@@ -1,53 +1,51 @@
-<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
- <ol class="govuk-breadcrumbs__list">
-  <li class="govuk-breadcrumbs__list-item">
-   <a class="govuk-breadcrumbs__link" href="../index.qmd">Home</a>
-  </li>
-  <li class="govuk-breadcrumbs__list-item">
-   <span aria-current="page">Word Count</span>
-  </li>
- </ol>
-</nav>
+---
+title: "Word Count"
+format: html
+engine: shiny
+---
 
-<h1 class="govuk-heading-l">Word Count</h1>
+```{python}
+import requests
+from bs4 import BeautifulSoup
+from collections import Counter
+import re
+from shiny import ui, render, reactive
 
-<form method="POST" novalidate>
- <div class="govuk-form-group {% if error %}govuk-form-group--error{% endif %}">
-  <label class="govuk-label" for="url">Enter a URL</label>
-  <span id="url-hint" class="govuk-hint">Example: https://www.gov.uk</span>
+ui.page_fluid(
+    ui.h2("Word Count"),
+    ui.input_text("url", "Enter a URL", placeholder="https://www.gov.uk"),
+    ui.input_action_button("count", "Count words"),
+    ui.output_ui("result"),
+    ui.output_text_verbatim("error")
+)
 
-  {% if error %}
-  <p id="url-error" class="govuk-error-message">
-   <span class="govuk-visually-hidden">Error:</span> {{ error }}
-  </p>
-    {% endif %}
-
-  <input class="govuk-input {% if error %}govuk-input--error{% endif %}" id="url" name="url" type="text" spellcheck="false" aria-describedby="url-hint {% if error %}url-error{% endif %}" required>
- </div>
-
- <button type="submit" class="govuk-button" data-module="govuk-button">Count words</button>
-</form>
-
-{% if results %}
-<h2 class="govuk-heading-m">Results</h2>
-<p class="govuk-body"><strong>Total words:</strong> {{ results.total_words }}</p>
-
-<h3 class="govuk-heading-s">Top 20 most common words</h3>
-
-<table class="govuk-table">
- <thead class="govuk-table__head">
-  <tr class="govuk-table__row">
-   <th scope="col" class="govuk-table__header">Word</th>
-   <th scope="col" class="govuk-table__header">Count</th>
-  </tr>
- </thead>
- <tbody class="govuk-table__body">
- {% for word, count in results.common %}
-  <tr class="govuk-table__row">
-   <td class="govuk-table__cell">{{ word }}</td>
-   <td class="govuk-table__cell">{{ count }}</td>
-  </tr>
-  {% endfor %}
- </tbody>
-</table>
-{% endif %}
+@render.ui
+def result():
+    if input.count() == 0:
+        return None
+    url = input.url()
+    if not url:
+        return ui.p("Please enter a URL.")
+    try:
+        resp = requests.get(url, timeout=10)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        for script in soup(["script", "style"]):
+            script.extract()
+        text = soup.get_text(separator=" ")
+        words = re.findall(r"\b\w+\b", text.lower())
+        total = len(words)
+        counter = Counter(words)
+        common = counter.most_common(20)
+        table = ui.HTML("<table class='govuk-table'><thead><tr><th>Word</th><th>Count</th></tr></thead><tbody>")
+        for word, count in common:
+            table.add_child(ui.HTML(f"<tr><td>{word}</td><td>{count}</td></tr>"))
+        table.add_child(ui.HTML("</tbody></table>"))
+        return [
+            ui.h3(f"Total words: {total}"),
+            ui.h4("Top 20 most common words"),
+            table
+        ]
+    except Exception as e:
+        return ui.p(f"Error: {e}")
+```
