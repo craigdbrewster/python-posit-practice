@@ -23,6 +23,40 @@ wrapper_end_html = read_html_file(WRAPPER_END_HTML_FILE)
 
 kw_model = KeyBERT()
 
+def extract_themes(text, top_n=5):
+    keywords = kw_model.extract_keywords(text, top_n=top_n, stop_words="english")
+    return themes_to_sentences(keywords)
+
+def themes_to_sentences(keywords):
+    if not keywords:
+        return "No major themes detected."
+    themes = [kw for kw, _ in keywords]
+    if len(themes) == 1:
+        return f"This page is mainly about {themes[0]}."
+    elif len(themes) == 2:
+        return f"The main themes are {themes[0]} and {themes[1]}."
+    elif len(themes) > 2:
+        theme_str = ", ".join(themes[:-1]) + f", and {themes[-1]}"
+        return f"This page is mainly about {theme_str}."
+    else:
+        return "No major themes detected."
+
+def get_page_words(url):
+    try:
+        resp = requests.get(url, timeout=10)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        for tag in soup(["script", "style", "noscript"]):
+            tag.decompose()
+        texts = soup.stripped_strings
+        words = " ".join(texts)
+        return words
+    except Exception as e:
+        return f"Error: {e}"
+
+def count_words(text):
+    return len(re.findall(r'\b\w+\b', text))
+
 app_ui = ui.page_fluid(
     ui.HTML(header_html),
     ui.HTML(wrapper_start_html),
@@ -41,7 +75,7 @@ app_ui = ui.page_fluid(
             class_="govuk-form-group"
         ),
         ui.tags.div(
-            ui.input_text_area("themes", "Common Themes", value="", rows=4, width="100%"),
+            ui.input_text_area("themes", "Content Themes (Conversational)", value="", rows=4, width="100%"),
             class_="govuk-form-group"
         ),
         ui.tags.div(
@@ -51,26 +85,6 @@ app_ui = ui.page_fluid(
     ),
     ui.HTML(wrapper_end_html)
 )
-
-def get_page_words(url):
-    try:
-        resp = requests.get(url, timeout=10)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
-        for tag in soup(["script", "style", "noscript"]):
-            tag.decompose()
-        texts = soup.stripped_strings
-        words = " ".join(texts)
-        return words
-    except Exception as e:
-        return f"Error: {e}"
-
-def extract_themes(text, top_n=5):
-    keywords = kw_model.extract_keywords(text, top_n=top_n, stop_words="english")
-    return ", ".join([kw for kw, _ in keywords])
-
-def count_words(text):
-    return len(re.findall(r'\b\w+\b', text))
 
 def server(input, output, session):
     @reactive.effect
