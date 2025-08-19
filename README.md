@@ -1,1 +1,1 @@
-# Python and Posit Training
+# Python and Posit Practice
