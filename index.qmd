@@ -4,7 +4,7 @@ format: html
 
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
 
-<p class="govuk-body">This site contains demo pages by me (Craig Brewster) created to train myself in Python and Posit, while following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GDS design guidelines <span class="govuk-visually-hidden">(opens in a new tab)</span></a> and <a class="govuk-link" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG accessibility standards <span class="govuk-visually-hidden">(opens in a new tab)</span></a>.
+<p class="govuk-body">This site contains coding demos created by me (Craig Brewster) created to train myself in Python and Posit, while following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GDS design guidelines <span class="govuk-visually-hidden">(opens in a new tab)</span></a> and <a class="govuk-link" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG accessibility standards <span class="govuk-visually-hidden">(opens in a new tab)</span></a>.
 </p>
 
 <div class="govuk-grid-row">
@@ -33,10 +33,10 @@ format: html
  </div>
 
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Word Count</h2>
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Forms and Actions</h2>
   <p class="govuk-body">Attempt at a more advanced tool that enables its users to calculate the word count of any webpage.</p>
   <p class="govuk-body">
-    <a href="word-count/index.qmd" class="govuk-link govuk-!-font-weight-bold">See the word count demo</a>
+    <a href="forms-actions/index.qmd" class="govuk-link govuk-!-font-weight-bold">View forms and actions</a>
   </p>
  </div>
 </div>
