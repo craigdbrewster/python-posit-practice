@@ -17,7 +17,7 @@ format: html
 
 <h2 class="govuk-heading-l">Pie Chart</h2>
 
-<h3>StringsCraig's Coding in 20 Years</h3>
+<h3>Craig's Coding in 20 Years</h3>
 
 <div class="govuk-body govuk-!-margin-bottom-6">
 ```{python}
@@ -27,26 +27,16 @@ labels = ['Craig Actually Coded', "Craig Should've Coded"]
 sizes = [2, 98]
 colors = ['#1d70b8', '#f3f2f1']
 
-def make_autopct(labels):
-    def inner_autopct(pcts):
-        def format_function(pct):
-            # Use current index from nonlocal variable
-            label = labels[format_function.idx]
-            result = f"{label}: {pct:.1f}%"
-            format_function.idx += 1
-            return result
-        format_function.idx = 0
-        return format_function
-    return inner_autopct
+merged_labels = [f"{label}: {size/sum(sizes)*100:.1f}%" for label, size in zip(labels, sizes)]
 
 fig, ax = plt.subplots(figsize=(5,5))
-autopct_func = make_autopct(labels)(sizes)
-wedges, texts, autotexts = ax.pie(
+wedges, texts = ax.pie(
     sizes,
+    labels=merged_labels,
     colors=colors,
-    autopct=autopct_func,
     startangle=90,
-    textprops={'fontsize': 16, 'color': '#0b0c0c'}
+    labeldistance=1.1,
+    textprops={'fontsize': 12, 'color': '#0b0c0c'}
 )
 ax.axis('equal')
 plt.show()
