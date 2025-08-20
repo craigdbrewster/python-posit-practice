@@ -1,6 +1,24 @@
-# Load the data from the titanic competition
-import pandas as pd
-titanic_data = pd.read_csv("../input/titanic/train.csv")
+---
+format: html
+---
 
-# Show the first five rows of the data
-titanic_data.head()
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+ <ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+   <a class="govuk-breadcrumbs__link" href="../index.qmd">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+   <span aria-current="page">Tables and Data</span>
+  </li>
+ </ol>
+</nav>
+
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Tables and Data</h1>
+
+```{python}
+import pandas as pd
+test_data = pd.read_csv("test-data.csv")
+
+# Show the entire table
+test_data
+```
