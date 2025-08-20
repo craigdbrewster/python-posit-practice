@@ -60,3 +60,16 @@ total_secs = secs_per_min * mins_per_hour * hours_per_day * days_per_year * num_
 print(total_secs)
 ```
 </div>
+
+<div class="govuk-body govuk-!-margin-bottom-6">
+ <h3 class="govuk-heading-m">Functions</h3>
+```{python}
+def add_values(input_var_1, input_var_2):
+    output_var = input_var_1 + input_var_2
+    return output_var
+
+new_number = add_values(10,12)
+print(new_number)
+
+```
+</div>
