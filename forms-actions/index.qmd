@@ -8,20 +8,24 @@ format: html
    <a class="govuk-breadcrumbs__link" href="../index.qmd">Home</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-   <span aria-current="page">Word Count</span>
+   <span aria-current="page">Forms and Actions</span>
   </li>
  </ol>
 </nav>
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Word Count</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Forms and Actions</h1>
+
+<h3 class="govuk-heading-xm">Word Count</h1>
 
 <div class="govuk-form-group">
   <label for="userText" class="govuk-label govuk-label--m">
     Enter your text
   </label>
-  <span id="userText-hint"">
-    The number of words will update as you type.
-  </span>
+  <div>
+   <span id="userText-hint">
+     The number of words will update as you type.
+   </span>
+  </div>
   <textarea
     id="userText"
     name="userText"
