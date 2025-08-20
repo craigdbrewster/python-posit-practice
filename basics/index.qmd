@@ -33,8 +33,8 @@ print(round((1 + 3) * (9 - 2) / 3, 2))
  <h3 class="govuk-heading-m">Variables</h3>
 ```{python}
 test_var_text = "Hello again!"
-test_var_formula = 4 + 5
 print(test_var_formula)
+test_var_formula = 4 + 5
 print(test_var_text)
 ```
 </div>
