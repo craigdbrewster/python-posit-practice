@@ -1,8 +1,13 @@
+#Quarto dependencies
+
 jupyter
 matplotlib
 pandas
 Flask
 quarto
+
+#Shiny dependencies
+
 shiny
 requests
 beautifulsoup4
