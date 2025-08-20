@@ -21,7 +21,7 @@ format: html
 
 <div class="govuk-body govuk-!-margin-bottom-6">
 ```{python}
-echo: false
+#| echo: false
 import matplotlib.pyplot as plt
 
 labels = ['Craig Actually Coded', "Craig Should've Coded"]
