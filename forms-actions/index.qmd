@@ -18,15 +18,10 @@ format: html
 <h3 class="govuk-heading-xm">Word Count</h1>
 
 <div class="govuk-form-group">
-  <label for="userText" class="govuk-label govuk-label--m">
-    Enter your text
-  </label>
-  <div>
-   <span id="userText-hint">
-     The number of words will update as you type.
-   </span>
-  </div>
-  <textarea
+ <p class="govuk-body">
+  Enter your text. The number of words will update as you type.
+ </p>
+ <textarea
     id="userText"
     name="userText"
     class="govuk-textarea"
@@ -36,7 +31,7 @@ format: html
     spellcheck="true"
     autocomplete="off"
     inputmode="text"
-  ></textarea>
+ ></textarea>
 </div>
 <div
   id="wordCount"
