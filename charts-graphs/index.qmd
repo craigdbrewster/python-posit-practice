@@ -19,6 +19,7 @@ format: html
 
 <p class="govuk-body">Craig's Coding in 20 Years</p>
 
+<div class="govuk-body govuk-!-margin-bottom-6">
 ```{python}
 import matplotlib.pyplot as plt
 
@@ -41,5 +42,6 @@ ax.axis('equal')
 plt.show()
 plt.close(fig)
 ```
+</div>
 
 <p class="govuk-body">In 20 years, Craig coded only 2% of the time, but could have coded 98%.</p>
