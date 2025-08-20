@@ -19,7 +19,47 @@ format: html
 
 <p class="govuk-body">Craig's Coding in 20 Years</p>
 
+
+
 ```{python}
+import matplotlib.pyplot as plt
+
+labels = ['Craig Actually Coded', "Craig Should've Coded"]
+sizes = [2, 98]
+colors = ['#1d70b8', '#f3f2f1']
+
+fig, ax = plt.subplots(figsize=(6, 4))
+# Pie chart (no labels, no autopct)
+wedges, _ = ax.pie(
+    sizes, 
+    colors=colors, 
+    startangle=90,
+    labels=None,
+    wedgeprops=dict(width=1),
+)
+ax.axis('equal')
+
+# Flush left by adjusting subplot
+plt.subplots_adjust(left=0.05, right=1, bottom=0.3, top=0.95)
+
+# Build custom legend below
+percentages = [f"{s/sum(sizes)*100:.1f}%" for s in sizes]
+for i, (label, color, pct) in enumerate(zip(labels, colors, percentages)):
+    y_pos = -0.25 - i*0.08
+    ax.scatter(-1.1, y_pos, s=180, color=color, marker='o', clip_on=False)
+    ax.text(-1.0, y_pos, f"{label}  {pct}", va='center', ha='left', fontsize=14, color='#0b0c0c')
+
+# Remove default ticks and spines
+ax.set_xticks([])
+ax.set_yticks([])
+for spine in ax.spines.values():
+    spine.set_visible(False)
+
+plt.show()
+plt.close(fig)
+
+
+
 #| echo: false
 import matplotlib.pyplot as plt
 
