@@ -17,11 +17,26 @@ format: html
 
 <form action="/pay" method="post" class="govuk-!-margin-bottom-6 govuk-form-group">
   <label for="hours" class="govuk-label govuk-label--m">Tax Calculator</label>
-  <span id="userText-hint" class="govuk-hint">Number of hours worked:</span>
-  <input type="number" id="hours" name="hours" min="0" step="0.01" class="govuk-input" required>
+  
+  <span class="govuk-hint">Number of hours worked:</span>
+  <input type="number" id="hours" name="hours" min="0" step="0.01" class="govuk-input" required value="{{ hours|default('') }}">
+  
+  <span class="govuk-hint">Hourly income (£):</span>
+  <input type="number" id="hourly_income" name="hourly_income" min="0" step="0.01" class="govuk-input" required value="{{ hourly_income|default('') }}">
+  
+  <span class="govuk-hint">Tax rate (%):</span>
+  <input type="number" id="tax_rate" name="tax_rate" min="0" max="100" step="0.01" class="govuk-input" required value="{{ tax_rate|default('') }}">
+  
   <button type="submit" class="govuk-button govuk-!-margin-top-3">Calculate Pay</button>
+  
   {% if pay_result is defined %}
-    <div class="govuk-inset-text govuk-!-margin-top-3">Pay after tax: £{{ "%.2f"|format(pay_result) }}</div>
+    <div class="govuk-inset-text govuk-!-margin-top-3">
+      <ul style="margin:0; padding-left:1.2em;">
+        <li>Pay after tax: £{{ "%.2f"|format(pay_result) }}</li>
+        <li>Daily income (8h): £{{ "%.2f"|format(daily_income) }}</li>
+        <li>Daily tax (8h): £{{ "%.2f"|format(daily_tax) }}</li>
+      </ul>
+    </div>
   {% endif %}
 </form>
 
