@@ -17,9 +17,11 @@ format: html
 
 <div class="govuk-body govuk-!-margin-bottom-6">
  <h3>Strings</h3>
-```{python}
-print("Hello, world!")
-```
+ <p class="govuk-body">
+  ```{python}
+  print("Hello, world!")
+  ```
+ </p>
 </div>
 
 <div class="govuk-body govuk-!-margin-bottom-6">
