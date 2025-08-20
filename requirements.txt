@@ -1,6 +1,8 @@
 jupyter
 matplotlib
 pandas
+Flask
+quarto
 shiny
 requests
 beautifulsoup4
