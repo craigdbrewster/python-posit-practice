@@ -15,60 +15,34 @@ format: html
 
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Forms and Actions</h1>
 
-<form action="/pay" method="post" class="govuk-!-margin-bottom-6 govuk-form-group">
-  <label for="hours" class="govuk-label govuk-label--m">Tax Calculator</label>
-  
-  <span class="govuk-hint">Number of hours worked:</span>
-  <input type="number" id="hours" name="hours" min="0" step="0.01" class="govuk-input" required value="{{ hours|default('') }}">
-  
-  <span class="govuk-hint">Hourly income (£):</span>
-  <input type="number" id="hourly_income" name="hourly_income" min="0" step="0.01" class="govuk-input" required value="{{ hourly_income|default('') }}">
-  
-  <span class="govuk-hint">Tax rate (%):</span>
-  <input type="number" id="tax_rate" name="tax_rate" min="0" max="100" step="0.01" class="govuk-input" required value="{{ tax_rate|default('') }}">
-  
-  <button type="submit" class="govuk-button govuk-!-margin-top-3">Calculate Pay</button>
-  
-  {% if pay_result is defined %}
-    <div class="govuk-inset-text govuk-!-margin-top-3">
-      <ul style="margin:0; padding-left:1.2em;">
-        <li>Pay after tax: £{{ "%.2f"|format(pay_result) }}</li>
-        <li>Daily income (8h): £{{ "%.2f"|format(daily_income) }}</li>
-        <li>Daily tax (8h): £{{ "%.2f"|format(daily_tax) }}</li>
-      </ul>
-    </div>
-  {% endif %}
-</form>
-
-<form action="/wordcount" method="post" class="govuk-form-group">
-  <label for="userText" class="govuk-label govuk-label--m">Word Count</label>
-  <span id="userText-hint" class="govuk-hint">Type or paste your text to count the words:</span>
-  <textarea
-      id="userText"
-      name="userText"
-      class="govuk-textarea"
-      aria-describedby="userText-hint wordCount"
-      rows="8"
-      style="width:100%; max-width:100%;"
-      spellcheck="true"
-      autocomplete="off"
-      inputmode="text"
-  >{{ user_text|default('') }}</textarea>
-  <button type="submit" class="govuk-button govuk-!-margin-top-3">Count Words</button>
-  <div
-    id="wordCount"
-    class="govuk-inset-text govuk-!-margin-top-3"
-    aria-live="polite"
-    style="font-weight:bold;"
-    tabindex="0"
-  >
-    {% if word_count is defined %}
-      Word count: {{ word_count }}
-    {% else %}
-      Word count: 0
-    {% endif %}
-  </div>
-</form>
+<div class="govuk-form-group">
+ <label for="userText" class="govuk-label govuk-label--m">
+    Word Count
+ </label>
+ <span id="userText-hint">
+    Enter your text. The number of words will update as you type.
+ </span>
+ <textarea
+    id="userText"
+    name="userText"
+    class="govuk-textarea"
+    aria-describedby="userText-hint wordCount"
+    rows="8"
+    style="width:100%; max-width:100%;"
+    spellcheck="true"
+    autocomplete="off"
+    inputmode="text"
+  ></textarea>
+</div>
+<div
+  id="wordCount"
+  class="govuk-inset-text"
+  aria-live="polite"
+  style="font-weight:bold;"
+  tabindex="0"
+>
+  Word count: 0
+</div>
 
 <script>
 function countWords(str) {
@@ -79,9 +53,7 @@ function countWords(str) {
 }
 const textarea = document.getElementById('userText');
 const countDisplay = document.getElementById('wordCount');
-if (textarea) {
-  textarea.addEventListener('input', function() {
-    countDisplay.textContent = "Word count: " + countWords(this.value);
-  });
-}
+textarea.addEventListener('input', function() {
+  countDisplay.textContent = "Word count: " + countWords(this.value);
+});
 </script>
