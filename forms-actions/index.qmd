@@ -15,10 +15,9 @@ format: html
 
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Forms and Actions</h1>
 
-<h3 class="govuk-heading-m>Tax Calculator</h3>
-
 <form action="/pay" method="post" class="govuk-!-margin-bottom-6 govuk-form-group">
-  <label for="hours" class="govuk-label govuk-label--m">Number of hours worked:</label>
+  <label for="hours" class="govuk-label govuk-label--m">Tax Calculator</label>
+  <span id="userText-hint" class="govuk-hint">Number of hours worked:</span>
   <input type="number" id="hours" name="hours" min="0" step="0.01" class="govuk-input" required>
   <button type="submit" class="govuk-button govuk-!-margin-top-3">Calculate Pay</button>
   {% if pay_result is defined %}
@@ -26,11 +25,9 @@ format: html
   {% endif %}
 </form>
 
-<h3 class="govuk-heading-m>Word Count</h3>
-
 <form action="/wordcount" method="post" class="govuk-form-group">
-  <label for="userText" class="govuk-label govuk-label--m">Enter your text:</label>
-  <span id="userText-hint" class="govuk-hint">Type or paste your text to count the words.</span>
+  <label for="userText" class="govuk-label govuk-label--m">Word Count</label>
+  <span id="userText-hint" class="govuk-hint">Type or paste your text to count the words:</span>
   <textarea
       id="userText"
       name="userText"
