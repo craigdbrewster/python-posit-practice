@@ -34,7 +34,7 @@ format: html
 
 
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Tabes and Datat</h2>
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Tables and Data</h2>
   <p class="govuk-body">Quick and dirty examples using CSVs to display data in an accessible, GDS-compliant way.</p>
   <p class="govuk-body">
     <a href="tables-data/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the tables</a>
