@@ -19,8 +19,6 @@ format: html
 
 <p class="govuk-body">Craig's Coding in 20 Years</p>
 
-
-
 ```{python}
 import matplotlib.pyplot as plt
 
@@ -57,9 +55,9 @@ for spine in ax.spines.values():
 
 plt.show()
 plt.close(fig)
+```
 
-
-
+```{python}
 #| echo: false
 import matplotlib.pyplot as plt
 
