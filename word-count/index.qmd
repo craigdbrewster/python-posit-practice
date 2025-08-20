@@ -19,7 +19,7 @@ format: html
   <label for="userText" class="govuk-label govuk-label--m">
     Enter your text
   </label>
-  <span id="userText-hint" class="govuk-hint govuk-!-margin-bottom-6">
+  <span id="userText-hint"">
     The number of words will update as you type.
   </span>
   <textarea
