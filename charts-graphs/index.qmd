@@ -17,7 +17,7 @@ format: html
 
 <h2 class="govuk-heading-l">Pie Chart</h2>
 
-<p class="govuk-body">Craig's Coding in 20 Years</p>
+<h3>StringsCraig's Coding in 20 Years</h3>
 
 <div class="govuk-body govuk-!-margin-bottom-6">
 ```{python}
