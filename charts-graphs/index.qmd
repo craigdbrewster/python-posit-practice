@@ -19,8 +19,6 @@ format: html
 
 <p class="govuk-body">Craig's Coding in 20 Years</p>
 
-<figure class="govuk-!-margin-bottom-6">
-
 ```{python}
 #| echo: false
 import matplotlib.pyplot as plt
@@ -38,34 +36,11 @@ wedges, texts, autotexts = ax.pie(
     startangle=90,
     labeldistance=1.1,
     pctdistance=0.8,
-    textprops={'fontsize': 19, 'color': '#0b0c0c'}
+    textprops={'fontsize': 16, 'color': '#0b0c0c'}
 )
 ax.axis('equal')
 plt.show()
 plt.close(fig)
 ```
 
-<figcaption class="govuk-body"> In 20 years, Craig coded only 2% of the time, but could have coded 98%. </figcaption>
-</figure>
-
-<table class="govuk-table govuk-!-margin-top-6">
- <caption class="govuk-table__caption govuk-table__caption--m">
-  Breakdown of Craig’s coding activity over 20 years
- </caption>
- <thead class="govuk-table__head">
-  <tr class="govuk-table__row">
-   <th scope="col" class="govuk-table__header">Category</th>
-   <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage</th>
-  </tr>
- </thead>
- <tbody class="govuk-table__body">
-  <tr class="govuk-table__row">
-   <td class="govuk-table__cell">Craig Actually Coded</td>
-   <td class="govuk-table__cell govuk-table__cell--numeric">2%</td>
-  </tr>
-  <tr class="govuk-table__row">
-   <td class="govuk-table__cell">Craig Should’ve Coded</td>
-   <td class="govuk-table__cell govuk-table__cell--numeric">98%</td>
-  </tr>
- </tbody>
-</table>
+<p class="govuk-body">In 20 years, Craig coded only 2% of the time, but could have coded 98%.</p>
