@@ -16,7 +16,7 @@ format: html
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Tables and Data</h1>
 
 ```{python}
-echo: false
+#| echo: false
 import pandas as pd
 test_data = pd.read_csv("test-data.csv")
 
