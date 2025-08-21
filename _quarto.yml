@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "My Site"
+  title: "Python and Posit Practice Channel"
 
 format:
   html:
@@ -12,3 +12,4 @@ format:
     include-before-body: gds-wrapper-start.html
     include-after-body: gds-wrapper-end.html
     body-attrs: 'class="govuk-template__body"'
+    css: styles.css
