@@ -4,95 +4,47 @@ format: html
 
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
 
----
-format: html
----
-
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
-
 <p class="govuk-body">This site contains coding demos created by me (Craig Brewster) to train myself in Python and Posit, while following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GDS design guidelines <span class="govuk-visually-hidden">(opens in a new tab)</span></a> and <a class="govuk-link" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG accessibility standards <span class="govuk-visually-hidden">(opens in a new tab)</span></a>.</p>
 
 <section class="brand--hm-revenue-customs brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+   <div class="gem-c-heading  gem-c-heading--padding govuk-!-margin-bottom-3">
+    <h2 class="gem-c-heading__text govuk-heading-m">
+     Featured
+    </h2>
+   </div>
+  </div>
+ </div>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <div class="gem-c-heading  gem-c-heading--padding govuk-!-margin-bottom-3">
-        <h2 class="gem-c-heading__text govuk-heading-m">
-          Featured
-        </h2>
-      </div>
-    </div>
+ <div class="govuk-grid-row">
+ 
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+   <div class="gem-c-document-list__item-title">
+    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/basics/index.qmd">The basics</a>
+   </div>
+    <p class="govuk-body">Trial-and-error coding samples to test fundamental Python skills.</p>
+   </div>
+
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+   <div class="gem-c-document-list__item-title">
+    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/data/index.qmd">Tables and Data</a>
+   </div>
+   <p class="govuk-body">Examples using CSVs to display data in an accessible, GDS-compliant way.</p>
   </div>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/basics/index.qmd">The basics</a>
-      </div>
-      <p class="govuk-body">Trial-and-error coding samples to test fundamental Python skills.</p>
-    </div>
-
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/data/index.qmd">Tables and Data</a>
-      </div>
-      <p class="govuk-body">Examples using CSVs to display data in an accessible, GDS-compliant way.</p>
-    </div>
-
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/charts-graphs/index.qmd">Charts and Graphs</a>
-      </div>
-      <p class="govuk-body">Experimental visualisations styled to follow GDS and WCAG standards.</p>
-    </div>
-
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/forms-actions/index.qmd">Forms and Actions</a>
-      </div>
-      <p class="govuk-body">Interactive tools that process user input and perform useful actions.</p>
-    </div>
-  </div>
-</section>
-<section class="brand--hm-revenue-customs brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <div class="gem-c-heading  gem-c-heading--padding govuk-!-margin-bottom-3">
-        <h2 class="gem-c-heading__text govuk-heading-m">
-          Featured
-        </h2>
-      </div>
-    </div>
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+   <div class="gem-c-document-list__item-title">
+    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/charts-graphs/index.qmd">Charts and Graphs</a>
+   </div>
+   <p class="govuk-body">Experimental visualisations styled to follow GDS and WCAG standards.</p>
   </div>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/basics/index.qmd">The basics</a>
-      </div>
-      <p class="govuk-body">Trial-and-error coding samples to test fundamental Python skills.</p>
-    </div>
-
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/data/index.qmd">Tables and Data</a>
-      </div>
-      <p class="govuk-body">Examples using CSVs to display data in an accessible, GDS-compliant way.</p>
-    </div>
-
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/charts-graphs/index.qmd">Charts and Graphs</a>
-      </div>
-      <p class="govuk-body">Experimental visualisations styled to follow GDS and WCAG standards.</p>
-    </div>
-
-    <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-      <div class="gem-c-document-list__item-title">
-        <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/forms-actions/index.qmd">Forms and Actions</a>
-      </div>
-      <p class="govuk-body">Interactive tools that process user input and perform useful actions.</p>
-    </div>
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+   <div class="gem-c-document-list__item-title">
+    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/forms-actions/index.qmd">Forms and Actions</a>
+   </div>
+   <p class="govuk-body">Interactive tools that process user input and perform useful actions.</p>
   </div>
+ </div>
 </section>
