@@ -12,7 +12,7 @@ format: html
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">The basics</h2>
   <p class="govuk-body">A hotchpotch of trial-and-error coding samples to test the most basic of Python skills.</p>
   <p class="govuk-body">
-    <a href="basics/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the basic examples</a>
+    <a href="content/basics/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the basic examples</a>
   </p>
  </div>
 
@@ -20,7 +20,7 @@ format: html
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">Tables and Data</h2>
   <p class="govuk-body">Quick and dirty examples using CSVs to display data in an accessible, GDS-compliant way.</p>
   <p class="govuk-body">
-    <a href="tables-data/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the tables</a>
+    <a href="tables-content/data/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the tables</a>
   </p>
  </div>
 
@@ -28,7 +28,7 @@ format: html
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">Charts and Graphs</h2>
   <p class="govuk-body">Experimental charts and graphs with Python, styled to follow GDS guidelines and WCAG standards.</p>
   <p class="govuk-body">
-    <a href="charts-graphs/index.qmd" class="govuk-link govuk-!-font-weight-bold">Explore charts and graphs</a>
+    <a href="content/charts-graphs/index.qmd" class="govuk-link govuk-!-font-weight-bold">Explore charts and graphs</a>
   </p>
  </div>
 
@@ -36,7 +36,7 @@ format: html
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">Forms and Actions</h2>
   <p class="govuk-body">Attempt at a more advanced tool that enables its users to calculate the word count of any webpage.</p>
   <p class="govuk-body">
-    <a href="forms-actions/index.qmd" class="govuk-link govuk-!-font-weight-bold">View forms and actions</a>
+    <a href="content/forms-actions/index.qmd" class="govuk-link govuk-!-font-weight-bold">View forms and actions</a>
   </p>
  </div>
 </div>
