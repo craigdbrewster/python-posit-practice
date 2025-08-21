@@ -7,33 +7,41 @@ format: html
 <p class="govuk-body">This site contains coding demos created by me (Craig Brewster) to train myself in Python and Posit, while following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GDS design guidelines <span class="govuk-visually-hidden">(opens in a new tab)</span></a> and <a class="govuk-link" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG accessibility standards <span class="govuk-visually-hidden">(opens in a new tab)</span></a>.</p>
 
 <section class="brand--hm-revenue-customs brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
- <div class="govuk-grid-row"> 
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-   <div class="gem-c-document-list__item-title">
-    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/basics/index.qmd">The basics</a>
-   </div>
-    <p class="govuk-body">Trial-and-error coding samples to test fundamental Python skills.</p>
-   </div>
 
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-   <div class="gem-c-document-list__item-title">
-    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/data/index.qmd">Tables and Data</a>
-   </div>
-   <p class="govuk-body">Examples using CSVs to display data in an accessible, GDS-compliant way.</p>
-  </div>
-
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-   <div class="gem-c-document-list__item-title">
-    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/charts-graphs/index.qmd">Charts and Graphs</a>
-   </div>
-   <p class="govuk-body">Experimental visualisations styled to follow GDS and WCAG standards.</p>
-  </div>
-
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-   <div class="gem-c-document-list__item-title">
-    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/forms-actions/index.qmd">Forms and Actions</a>
-   </div>
-   <p class="govuk-body">Interactive tools that process user input and perform useful actions.</p>
-  </div>
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">The basics</h2>
+  <p class="govuk-body">A hotchpotch of trial-and-error coding samples to test the most basic of Python skills.</p>
+  <p class="govuk-body">
+    <a href="basics/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the basic examples</a>
+  </p>
  </div>
+
+ <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Tables and Data</h2>
+  <p class="govuk-body">Quick and dirty examples using CSVs to display data in an accessible, GDS-compliant way.</p>
+  <p class="govuk-body">
+    <a href="tables-data/index.qmd" class="govuk-link govuk-!-font-weight-bold">View the tables</a>
+  </p>
+ </div>
+
+ <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Charts and Graphs</h2>
+  <p class="govuk-body">Experimental charts and graphs with Python, styled to follow GDS guidelines and WCAG standards.</p>
+  <p class="govuk-body">
+    <a href="charts-graphs/index.qmd" class="govuk-link govuk-!-font-weight-bold">Explore charts and graphs</a>
+  </p>
+ </div>
+
+ <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Word Count</h2>
+  <h2 class="govuk-heading-l govuk-!-font-weight-bold">Forms and Actions</h2>
+  <p class="govuk-body">Attempt at a more advanced tool that enables its users to calculate the word count of any webpage.</p>
+  <p class="govuk-body">
+    <a href="word-count/index.qmd" class="govuk-link govuk-!-font-weight-bold">See the word count demo</a>
+    <a href="forms-actions/index.qmd" class="govuk-link govuk-!-font-weight-bold">View forms and actions</a>
+  </p>
+ </div>
+</div>
+
 </section>
