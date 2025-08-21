@@ -12,4 +12,3 @@ format:
     include-before-body: gds-wrapper-start.html
     include-after-body: gds-wrapper-end.html
     body-attrs: 'class="govuk-template__body"'
-    css: govuk-all.css
