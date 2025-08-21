@@ -9,6 +9,16 @@ format: html
 <section class="brand--hm-revenue-customs brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
 
 <div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+  <div class="gem-c-heading  gem-c-heading--padding govuk-!-margin-bottom-3">
+   <h2 class="gem-c-heading__text govuk-heading-m">
+   Python code examples
+   </h2>
+  </div>
+ </div>
+</div>
+
+<div class="govuk-grid-row">
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">The basics</h2>
   <p class="govuk-body">A hotchpotch of trial-and-error coding samples to test the most basic of Python skills.</p>
