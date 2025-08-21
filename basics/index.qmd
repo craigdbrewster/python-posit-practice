@@ -13,7 +13,7 @@ format: html
  </ol>
 </nav>
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">The basic</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">The basics</h1>
 
 <div class="govuk-body govuk-!-margin-bottom-6">
  <h3 class="govuk-heading-m">Strings</h3>
