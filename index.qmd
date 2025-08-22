@@ -20,6 +20,13 @@ format: html
 
 <div class="govuk-grid-row">
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+  <div class="gem-c-document-list__item-title">
+   <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="content/basics/index.qmd">The basics</a>
+  </div>
+  <p class="govuk-body">Trial-and-error coding samples to test fundamental Python skills.</p>
+ </div>
+
+ <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
   <h2 class="govuk-heading-l govuk-!-font-weight-bold">The basics</h2>
   <p class="govuk-body">A hotchpotch of trial-and-error coding samples to test the most basic of Python skills.</p>
   <p class="govuk-body">
