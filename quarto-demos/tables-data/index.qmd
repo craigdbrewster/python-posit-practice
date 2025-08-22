@@ -20,5 +20,5 @@ format: html
 #| asis: true
 import pandas as pd
 test_data = pd.read_csv("test-data.csv")
-print(test_data.to_html(classes="govuk-table", index=False, border=0))
+test_data.to_html(classes="govuk-table", index=False, border=0)
 ```

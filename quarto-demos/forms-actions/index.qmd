@@ -25,7 +25,7 @@ format: html
  <textarea
     id="userText"
     name="userText"
-    class="govuk-textarea govuk-!-margin-top-6 govuk-!-margin-bottom-6""
+    class="govuk-textarea govuk-!-margin-top-6 govuk-!-margin-bottom-6"
     aria-describedby="userText-hint wordCount"
     rows="8"
     style="width:100%; max-width:100%;"
