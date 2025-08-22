@@ -11,9 +11,9 @@ def read_html_file(filename):
     except Exception as e:
         return f"<!-- Error loading {filename}: {e} -->"
 
-HEADER_HTML_FILE = "gds-header.html"
-WRAPPER_START_HTML_FILE = "gds-wrapper-start.html"
-WRAPPER_END_HTML_FILE = "gds-wrapper-end.html"
+HEADER_HTML_FILE = "includes/gds-header.html"
+WRAPPER_START_HTML_FILE = "includes/gds-wrapper-start.html"
+WRAPPER_END_HTML_FILE = "includes/gds-wrapper-end.html"
 
 header_html = read_html_file(HEADER_HTML_FILE)
 wrapper_start_html = read_html_file(WRAPPER_START_HTML_FILE)
