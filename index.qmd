@@ -20,28 +20,28 @@ format: html
 
 <div class="govuk-grid-row">
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <div class="gem-c-document-list__item-title" govuk-!-margin-bottom-3>
+  <div class="gem-c-document-list__item-title govuk-!-margin-bottom-3">
    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="quarto-demos/basics/index.qmd">The basics</a>
   </div>
   <p class="govuk-body">Trial-and-error coding samples to test fundamental Python skills.</p>
  </div>
 
-<div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <div class="gem-c-document-list__item-title" govuk-!-margin-bottom-3>
+ <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+  <div class="gem-c-document-list__item-title govuk-!-margin-bottom-3">
    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="quarto-demos/tables-data/index.qmd">Tables and Data</a>
   </div>
   <p class="govuk-body">Examples using CSVs to display data in an accessible, GDS-compliant way.</p>
  </div>
 
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <div class="gem-c-document-list__item-title" govuk-!-margin-bottom-3>
+  <div class="gem-c-document-list__item-title govuk-!-margin-bottom-3">
    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="quarto-demos/charts-graphs/index.qmd">Charts and Graphs</a>
   </div>
   <p class="govuk-body">Experimental visualisations styled to follow GDS and WCAG standards.</p>
  </div>
 
  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-  <div class="gem-c-document-list__item-title" govuk-!-margin-bottom-3>
+ <div class="gem-c-document-list__item-title govuk-!-margin-bottom-3">
    <a class="brand__color govuk-link gem-c-force-print-link-styles" lang="en" href="quarto-demos/forms-actions/index.qmd">Forms and Actions</a>
   </div>
   <p class="govuk-body">Interactive tools that process user input and perform useful actions.</p>
