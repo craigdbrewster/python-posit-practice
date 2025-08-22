@@ -22,6 +22,7 @@ format: html
 <div class="govuk-body govuk-!-margin-bottom-6">
 ```{python}
 #| echo: false
+#| fig-alt: "Pie chart showing Craig coded 2% of the time and could have coded 98%."
 import matplotlib.pyplot as plt
 
 labels = ['Craig Actually Coded', "Craig Should've Coded"]
