@@ -19,13 +19,13 @@ format: html
  <label for="userText" class="govuk-label govuk-label--m">
     Word Count
  </label>
- <span id="userText-hint" class="govuk-hint govuk-!-margin-bottom-3">
+ <span id="userText-hint" class="govuk-hint">
    Enter your text. The number of words will update as you type.
  </span>
  <textarea
     id="userText"
     name="userText"
-    class="govuk-textarea"
+    class="govuk-textarea govuk-!-margin-top-6 govuk-!-margin-bottom-6""
     aria-describedby="userText-hint wordCount"
     rows="8"
     style="width:100%; max-width:100%;"
