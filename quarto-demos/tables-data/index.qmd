@@ -17,11 +17,11 @@ format: html
 
 ```{python}
 #| echo: false
-#| asis: true
+from IPython.display import HTML
 import pandas as pd
 test_data = pd.read_csv("test-data.csv")
 html = test_data.to_html(classes="govuk-table", index=False, border=0)
 html = html.replace("<th ", "<th style='text-align: left;' ")
 html = html.replace("<td>", "<td style='text-align: left;'>")
-html
+HTML(html)
 ```
