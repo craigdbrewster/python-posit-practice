@@ -17,9 +17,8 @@ format: html
 
 ```{python}
 #| echo: false
+#| asis: true
 import pandas as pd
 test_data = pd.read_csv("test-data.csv")
-
-# Show the entire table
-test_data
+print(test_data.to_html(classes="govuk-table", index=False, border=0))
 ```

@@ -19,8 +19,8 @@ format: html
  <label for="userText" class="govuk-label govuk-label--m">
     Word Count
  </label>
- <span id="userText-hint">
-    Enter your text. The number of words will update as you type.
+ <span id="userText-hint" class="govuk-hint govuk-!-margin-bottom-3">
+   Enter your text. The number of words will update as you type.
  </span>
  <textarea
     id="userText"
@@ -36,9 +36,8 @@ format: html
 </div>
 <div
   id="wordCount"
-  class="govuk-inset-text"
+  class="govuk-hint"
   aria-live="polite"
-  style="font-weight:bold;"
   tabindex="0"
 >
   Word count: 0
