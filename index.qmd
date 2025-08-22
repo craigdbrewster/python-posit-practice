@@ -1,9 +1,10 @@
 ---
-title: ""
 format: html
 ---
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
+<div class="govuk-width-container">
+ <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
+</div>
 
 <p class="govuk-body">This site contains coding demos created by me (Craig Brewster) to train myself in Python and Posit, while following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GDS design guidelines <span class="govuk-visually-hidden">(opens in a new tab)</span></a> and <a class="govuk-link" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG accessibility standards <span class="govuk-visually-hidden">(opens in a new tab)</span></a>.</p>
 
