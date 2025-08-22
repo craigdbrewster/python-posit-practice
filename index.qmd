@@ -2,7 +2,6 @@
 format: html
 ---
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
 
 <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
 
