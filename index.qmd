@@ -2,15 +2,15 @@
 format: html
 ---
 
-<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
- <ol class="govuk-breadcrumbs__list">
-  <li class="govuk-breadcrumbs__list-item">
-   <span aria-current="page">Home</span>
-  </li>
- </ol>
-</nav>
-
-<h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Python and Posit Practice Channel</h1>
+<header class="homepage-header">
+ <div class="govuk-width-container">
+  <div class="homepage-header__title-container">
+   <h1 class="homepage-header__title">
+    <span class="homepage-header__intro homepage-inverse-header__intro--bold">Python and Posit Practice Channel</span>
+   </h1>
+  </div>
+ </div>
+</header> 
 
 <p class="govuk-body">This site contains coding demos created by me (Craig Brewster) to train myself in Python and Posit, while following <a class="govuk-link" href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GDS design guidelines <span class="govuk-visually-hidden">(opens in a new tab)</span></a> and <a class="govuk-link" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG accessibility standards <span class="govuk-visually-hidden">(opens in a new tab)</span></a>.</p>
 
