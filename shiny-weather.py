@@ -106,7 +106,7 @@ app_ui = ui.page_fluid(
             ui.hr(),
             ui.output_table("sources_tbl"),
         ),
-        ui.main(
+        ui.main_panel(
             ui.input_text_area("question", "Ask about UK weather:", rows=3, placeholder="e.g., What's the latest severe weather warning for Scotland today?"),
             ui.input_action_button("ask", "Ask"),
             ui.output_ui("answer"),
