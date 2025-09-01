@@ -14,24 +14,34 @@ os.makedirs(DATA_DIR, exist_ok=True)
 TOP_K = 5
 CHUNK_SIZE = 1200
 
+
 DEFAULT_SOURCES = [
     {
-        "name": "Wikipedia - Climate of the United Kingdom",
-        "url": "https://en.wikipedia.org/wiki/Climate_of_the_United_Kingdom"
+        "name": "Local Weather Sample",
+        "url": "file://weather_sample.txt"
     }
 ]
 
 def fetch_page(url):
-    try:
-        resp = requests.get(url, timeout=8)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
-        title = soup.title.string if soup.title else url
-        main = soup.find("main") or soup.find("article") or soup.body
-        text = main.get_text(separator="\n") if main else soup.get_text(separator="\n")
-        return {"url": url, "title": title, "text": text}
-    except Exception as e:
-        return {"url": url, "title": url, "text": f"Error fetching: {e}"}
+    if url.startswith("file://"):
+        path = url.replace("file://", "")
+        try:
+            with open(path, "r") as f:
+                text = f.read()
+            return {"url": url, "title": "Local Weather Sample", "text": text}
+        except Exception as e:
+            return {"url": url, "title": "Local Weather Sample", "text": f"Error reading file: {e}"}
+    else:
+        try:
+            resp = requests.get(url, timeout=8)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
+            title = soup.title.string if soup.title else url
+            main = soup.find("main") or soup.find("article") or soup.body
+            text = main.get_text(separator="\n") if main else soup.get_text(separator="\n")
+            return {"url": url, "title": title, "text": text}
+        except Exception as e:
+            return {"url": url, "title": url, "text": f"Error fetching: {e}"}
 
 def chunk_text(text, chunk_size=CHUNK_SIZE):
     words = text.split()
