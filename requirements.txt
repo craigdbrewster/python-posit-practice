@@ -16,4 +16,7 @@ sentence-transformers
 scikit-learn
 openai
 pandas
+numpy
 tqdm
+aiohttp
+gunicorn
