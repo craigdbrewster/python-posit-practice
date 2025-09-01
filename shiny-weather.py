@@ -96,7 +96,7 @@ def answer_with_rag(query, hits):
 
 app_ui = ui.page_fluid(
     ui.h2("UK Weather Q&A (RAG, Local Demo)"),
-    ui.sidebar_layout(
+    ui.layout_sidebar(
         ui.sidebar_panel(
             ui.input_text("src_name", "Source name", "Custom Source"),
             ui.input_text("src_url", "Source URL", "https://"),
