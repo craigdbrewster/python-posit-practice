@@ -97,7 +97,7 @@ def answer_with_rag(query, hits):
 app_ui = ui.page_fluid(
     ui.h2("UK Weather Q&A (RAG, Local Demo)"),
     ui.layout_sidebar(
-        ui.sidebar_panel(
+        ui.panel_sidebar(
             ui.input_text("src_name", "Source name", "Custom Source"),
             ui.input_text("src_url", "Source URL", "https://"),
             ui.input_action_button("add_source", "Add Source"),
@@ -106,7 +106,7 @@ app_ui = ui.page_fluid(
             ui.hr(),
             ui.output_table("sources_tbl"),
         ),
-        ui.main_panel(
+        ui.panel_main(
             ui.input_text_area("question", "Ask about UK weather:", rows=3, placeholder="e.g., What's the latest severe weather warning for Scotland today?"),
             ui.input_action_button("ask", "Ask"),
             ui.output_ui("answer"),
